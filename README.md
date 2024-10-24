@@ -4,7 +4,7 @@
 - Bilgenur Erkan
 - Buse Köroğlu
 - Enes Eldeş
-- Enes Mert Ayaydın
+- Enes Mert Aydın
 - İdris Aydın
 
 ## Repository Overview
