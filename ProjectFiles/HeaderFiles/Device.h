@@ -14,7 +14,7 @@ public:
 
     void open();
     void close();
-    void display() const;
+    virtual void display() const;
     virtual double threadLevel() const;
 
     std::string getName() const;
