@@ -3,9 +3,17 @@
 Room::Room(const std::string &name)
     : name(name), temperature(20), airCondition(75) {}
 
-bool Room::hasRisk() const
-{
-    return true; // Sonra bak
+bool Room::hasRisk() const{
+        for (const auto& device : devices) {  // roomdaki vektör içi tüm elemanların threadLevel değerlerine bakıp true false döndürsün
+            if (device->threadLevel() > 50) { // bu thread değeri değişebilir
+                return true;  
+            }
+        }
+        return false; 
+}
+
+bool Room::hasUsers() const {
+        return users.size() > 0;  // Eğer kullanıcı vektörü boş değilse true döndür
 }
 
 int Room::getTemperature() const
