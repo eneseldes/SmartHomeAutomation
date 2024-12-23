@@ -1,26 +1,28 @@
-#ifndef KIDSPEAKER_H
-#define KIDSPEAKER_H
+#ifndef CANRING_H
+#define CANRING_H
 
-#include "CanRing.h"
-#include "Child.h"
+#include "SettableDevice.h"
 #include <string>
 
-// KidSpeaker class inherits from CanRing and interacts with Child to respond when the child is crying.
-class KidSpeaker : public CanRing {
+class CanRing : public SettableDevice {
 private:
-    Child* child;         // Pointer to the Child object to monitor.
-    std::string message;  // Message to play when alarm is triggered.
+    bool isRinging; // To track if the device is ringing or not
 
 public:
-    // Constructor to initialize the KidSpeaker with a name, attribute, and default message.
-    KidSpeaker(const std::string& name, int attr, const std::string& defaultMessage, Child* monitoredChild);
+    // Constructor to initialize CanRing with a name, attribute, and default isRinging as false
+    CanRing(const std::string& name, int attr);
 
-    // Sets a custom message to play.
-    void setMessage(const std::string& newMessage);
+    // Start ringing the device
+    void startRinging();
 
-    // Monitors the child and triggers the alarm if the child is crying.
-    void monitorChild();
+    // Stop ringing the device
+    void stopRinging();
+
+    // Check if the device is currently ringing
+    bool getRingStatus() const;
+
+    // Ring the device for a specified duration
+    void ringFor(int duration);
 };
 
 #endif
-
