@@ -13,8 +13,8 @@ public:
     Device(const std::string& name);
     virtual ~Device() = default;
 
-    virtual void open();
-    virtual void close();
+    void open();
+    void close();
     virtual void display() const = 0;
     virtual double getEnergyConsumption() const = 0;
     virtual double threadLevel() = 0;

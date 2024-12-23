@@ -2,8 +2,6 @@
 
 Fridge::Fridge(std::string name, int attr) : SettableDevice(name, attr) {}
 
-void Fridge::open() { }
-void Fridge::close() { }
 void Fridge::display() const {  
     std::cout << "Fridge in the kitchen" << std::endl;
 }

@@ -20,6 +20,10 @@ public:
 
     // Monitors the child and triggers the alarm if the child is crying.
     void monitorChild();
+
+    void display() const override;  
+    double threadLevel() override;
+    double getEnergyConsumption() const override;  
 };
 
 #endif

@@ -7,8 +7,8 @@ void SettableDevice::setAttribute(int attr) {
     attribute = attr;
 }
 
-std::string SettableDevice::getAttribute() const {
-    return std::to_string(attribute);
+int SettableDevice::getAttribute() const {
+    return attribute;
 }
 
 void SettableDevice::setTimer(int timer) {

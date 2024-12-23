@@ -9,9 +9,9 @@ CanRing::CanRing(const std::string& name, int attr)
 void CanRing::startRinging() {
     if (!isRinging) {
         isRinging = true;
-        std::cout << name << " is now ringing!" << std::endl;
+        std::cout << deviceName << " is now ringing!" << std::endl;
     } else {
-        std::cout << name << " is already ringing." << std::endl;
+        std::cout << deviceName << " is already ringing." << std::endl;
     }
 }
 
@@ -19,9 +19,9 @@ void CanRing::startRinging() {
 void CanRing::stopRinging() {
     if (isRinging) {
         isRinging = false;
-        std::cout << name << " has stopped ringing!" << std::endl;
+        std::cout << deviceName << " has stopped ringing!" << std::endl;
     } else {
-        std::cout << name << " is not ringing." << std::endl;
+        std::cout << deviceName << " is not ringing." << std::endl;
     }
 }
 
@@ -42,7 +42,7 @@ void CanRing::ringFor(int duration) {
 
     // Set the timer for the ringing duration
     setTimer(duration);
-    std::cout << name << " will stop ringing after " << duration << " seconds." << std::endl;
+    std::cout << deviceName << " will stop ringing after " << duration << " seconds." << std::endl;
 
     // Simulate the ringing process (no actual delay)
     for (int i = 1; i <= duration; ++i) {

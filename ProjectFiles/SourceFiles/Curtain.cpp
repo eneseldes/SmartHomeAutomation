@@ -2,14 +2,6 @@
 
 Curtain::Curtain(std::string name, int attr) : SettableDevice(name, attr) {}
 
-void Curtain::open() {
-    std::cout << "Curtain opened." << std::endl;
-}
-
-void Curtain::close() {
-    std::cout << "Curtain closed." << std::endl;
-}
-
 void Curtain::display() const { 
     std::cout << "Curtain is in the living room" << std::endl; 
 }

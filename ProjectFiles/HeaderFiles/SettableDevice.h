@@ -13,14 +13,10 @@ public:
     SettableDevice(const std::string& name, int attr);
 
     void setAttribute(int attr);
-    std::string getAttribute() const;
+    int getAttribute() const;
 
     void setTimer(int timer);
     void stopTimer();
-
-    
-    virtual void display() const = 0; 
-    virtual double getEnergyConsumption() const = 0;  
 };
 
 #endif

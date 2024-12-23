@@ -9,8 +9,6 @@ public:
     Thermostat(std::string name, int attr);
 
     void heatRoom(Room& room);
-    void open() override;
-    void close() override;
     void display() const override;  
     double threadLevel() override;
     double getEnergyConsumption() const override;  

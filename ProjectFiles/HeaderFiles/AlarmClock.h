@@ -18,6 +18,10 @@ public:
 
     // Activates the alarm when the set time is reached.
     void activateAlarm();
+
+    void display() const override; 
+    double getEnergyConsumption() const override;
+    double threadLevel() override;
 };
 
 #endif

@@ -8,8 +8,6 @@ public:
 
     Fridge(std::string name, int attr);
 
-    void open() override;
-    void close() override;
     void display() const override;  
     double getEnergyConsumption() const override;  
     double threadLevel() override;

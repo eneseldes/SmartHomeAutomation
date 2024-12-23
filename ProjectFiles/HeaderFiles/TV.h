@@ -9,16 +9,16 @@ private:
     int currentChannel;
 
 public:
-    TV(std::string name, int attr, int channel);
-
-    void display() const override;
-    double getEnergyConsumption() const override;
-    double threadLevel() override;
+    TV(const std::string &deviceName, int attr, int channel);
 
     void changeChannel(bool up); 
 
     int getCurrentChannel() const;  
-    void setChannelTo(int channel);  
+    void setChannelTo(int channel);
+
+    void display() const override;
+    double getEnergyConsumption() const override;
+    double threadLevel() override;
 };
 
 #endif
