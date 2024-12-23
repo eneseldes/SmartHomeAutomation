@@ -1,0 +1,19 @@
+#ifndef THERMOSTAT_H
+#define THERMOSTAT_H
+#include "SettableDevice.h"
+#include "Room.h"
+
+class Thermostat : public SettableDevice {
+
+public:
+    Thermostat(std::string name, int attr);
+
+    void heatRoom(Room& room);
+    void open() override;
+    void close() override;
+    void display() const override;  // display fonksiyonu override edildi
+    double threadLevel() override;
+    double getEnergyConsumption() const override;  // getEnergyConsumption fonksiyonu override edildi
+};
+
+#endif

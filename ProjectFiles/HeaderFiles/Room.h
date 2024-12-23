@@ -17,20 +17,23 @@ private:
     int airCondition;
     std::vector<Device *> devices;
     std::vector<User *> users;
-    
+
 public:
     Room(const std::string& name);
     virtual ~Room() = default;
 
     bool hasRisk() const;
+    bool hasUsers() const;
+
     int getTemperature() const;
     int getAirCondition() const;
     std::string getName() const;
     std::vector<Device *>& getDevices();
     std::vector<User *>& getUsers();
-    bool hasUsers() const;
+
     void setTemperature(int temperature);
     void setAirCondition(int airCondition);
+
     bool operator==(Room &other);
 };
 
