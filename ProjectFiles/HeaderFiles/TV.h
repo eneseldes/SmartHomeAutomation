@@ -15,9 +15,10 @@ public:
     double getEnergyConsumption() const override;
     double threadLevel() override;
 
-    // Getter ve Setter fonksiyonları
-    int getCurrentChannel() const;  // currentChannel'ı döndüren fonksiyon
-    void setChannelTo(int channel);  // currentChannel'ı ayarlayan fonksiyon
+    void changeChannel(bool up); 
+
+    int getCurrentChannel() const;  
+    void setChannelTo(int channel);  
 };
 
 #endif

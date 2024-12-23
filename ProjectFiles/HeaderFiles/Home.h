@@ -11,8 +11,6 @@
 class User;
 class Room;
 
-// 
-
 class Home
 {
 private:

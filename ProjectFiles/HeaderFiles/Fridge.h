@@ -10,8 +10,8 @@ public:
 
     void open() override;
     void close() override;
-    void display() const override;  // const burada da var
-    double getEnergyConsumption() const override;  // const burada da var
+    void display() const override;  
+    double getEnergyConsumption() const override;  
     double threadLevel() override;
 };
 

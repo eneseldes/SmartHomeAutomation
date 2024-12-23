@@ -11,9 +11,9 @@ public:
     void heatRoom(Room& room);
     void open() override;
     void close() override;
-    void display() const override;  // display fonksiyonu override edildi
+    void display() const override;  
     double threadLevel() override;
-    double getEnergyConsumption() const override;  // getEnergyConsumption fonksiyonu override edildi
+    double getEnergyConsumption() const override;  
 };
 
 #endif

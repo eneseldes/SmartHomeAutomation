@@ -18,9 +18,9 @@ public:
     void setTimer(int timer);
     void stopTimer();
 
-    // display ve getEnergyConsumption sanal fonksiyonlar
-    virtual void display() const = 0;  // Sanal fonksiyon
-    virtual double getEnergyConsumption() const = 0;  // Sanal fonksiyon
+    
+    virtual void display() const = 0; 
+    virtual double getEnergyConsumption() const = 0;  
 };
 
 #endif
