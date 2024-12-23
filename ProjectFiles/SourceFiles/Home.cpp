@@ -4,13 +4,13 @@ Home::Home() {}
 
 void Home::saveState(const std::string &file)
 {
-    // PROJE TAMAMLANINCA BAK
+    
     std::cout << "State saved to " << file << std::endl;
 }
 
 void Home::loadState(const std::string &file)
 {
-    // PROJE TAMAMLANINCA BAK
+    
     std::cout << "State loaded from " << file << std::endl;
 }
 

@@ -35,7 +35,7 @@ void User::visitRoom(Room *room)
     if (room == currentRoom)
     {
         std::cout << ">>> PROCESS FAILED: " << this->getNickname() << " is already in "
-                  << currentRoom->getName() << "." << std::endl;
+                << currentRoom->getName() << "." << std::endl;
         return;
     }
 
@@ -51,7 +51,7 @@ void User::visitRoom(Room *room)
     newRoomUserList.push_back(this);
 
     std::cout << nickname << " moved into " << room->getName() << " from "
-              << currentRoom->getName() << "." << std::endl;
+        << currentRoom->getName() << "." << std::endl;
 }
 
 std::string User::getNickname()

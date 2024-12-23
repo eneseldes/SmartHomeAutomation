@@ -1,43 +1,33 @@
 #include "Device.h"
 
-// Constructor
-Device::Device(const std::string& name) : name(name) {}
+Device::Device(const std::string& name) : deviceName(name), active(false) {}
 
 void Device::open() {
     active = true;
-    std::cout << name << " is opened." << std::endl;
+    std::cout << deviceName << " is opened." << std::endl;
 }
 
 void Device::close() {
     active = false;
-    std::cout << name << " is closed." << std::endl;
-}
-
-void Device::display() const {
-    std::cout << name << "is " << (active ? "active. " : "deactived. ") << std::endl;
-}
-
-double Device::threadLevel() const {
-    return 0.0; // Default implementation
+    std::cout << deviceName << " is closed." << std::endl;
 }
 
 std::string Device::getName() const {
-    return name;
+    return deviceName;
 }
 
-bool Device::isActive() {
+bool Device::isActive() const {
     return active;
 }
 
 void Device::setName(const std::string& name) {
-    this->name = name;
+    deviceName = name;
 }
 
 void Device::setActive(bool active) {
     this->active = active;
 }
 
-// == overload 
 bool Device::operator==(Device &other) {
-    return name == other.getName();
+    return this->deviceName == other.getName();
 }
