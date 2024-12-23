@@ -11,9 +11,12 @@
 class User;
 class Room;
 
+// 
+
 class Home
 {
 private:
+
     std::vector<User *> users;
     std::vector<Room *> rooms;
 
