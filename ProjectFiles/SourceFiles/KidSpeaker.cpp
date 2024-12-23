@@ -1,9 +1,13 @@
 #include "KidSpeaker.h"
+#include "Child.h"
 #include <iostream>
 
 // Constructor to initialize the KidSpeaker and associate it with a Child object.
 KidSpeaker::KidSpeaker(const std::string& name, int attr, const std::string& defaultMessage, Child* monitoredChild)
-    : CanRing(name, attr), message(defaultMessage), child(monitoredChild) {}
+    : CanRing(name, attr), message(defaultMessage), child(monitoredChild) {
+    // Constructor implementation
+    std::cout << name << " is initialized with message: " << message << std::endl;
+}
 
 // Sets a custom message to play.
 void KidSpeaker::setMessage(const std::string& newMessage) {
@@ -21,4 +25,3 @@ void KidSpeaker::monitorChild() {
         std::cout << name << " detected that " << child->getNickname() << " is calm." << std::endl;
     }
 }
-
