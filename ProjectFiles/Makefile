@@ -11,7 +11,8 @@ HEADERDIR = HeaderFiles
 
 # Source Files
 SRCS = $(SRCDIR)/main.cpp $(SRCDIR)/Admin.cpp $(SRCDIR)/Child.cpp $(SRCDIR)/Device.cpp \
-       $(SRCDIR)/Home.cpp $(SRCDIR)/Room.cpp $(SRCDIR)/User.cpp
+       $(SRCDIR)/Home.cpp $(SRCDIR)/Room.cpp $(SRCDIR)/User.cpp \
+       $(SRCDIR)/SettableDevice.cpp $(SRCDIR)/Thermostat.cpp $(SRCDIR)/Curtain.cpp $(SRCDIR)/Fridge.cpp $(SRCDIR)/TV.cpp 
 
 # Build Rules
 all: $(TARGET)
