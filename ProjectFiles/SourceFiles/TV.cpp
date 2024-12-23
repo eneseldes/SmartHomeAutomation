@@ -1,21 +1,33 @@
 #include "TV.h"
 
-TV::TV(string name, int attr, int channel) : SettableDevice(name, attr), currentChannel(channel) {}
+TV::TV(std::string name, int attr, int channel) 
+    : SettableDevice(name, attr), currentChannel(channel) {}
+
+void TV::display() const {  
+    std::cout << "TV Name: " << getName() << ", Current Channel: " << currentChannel << std::endl;
+}
+
+double TV::getEnergyConsumption() const {  
+    return 50.0; 
+}
+
+double TV::threadLevel() {
+    return 0.5;  
+}
+
+void TV::changeChannel(bool up) {
+    if (up) {
+        currentChannel++;
+    } else {
+        currentChannel--;
+    }
+}
+
 
 int TV::getCurrentChannel() const {
-    return currentChannel;
+    return currentChannel;  
 }
 
-void TV::setChannelTo(int channel){
-    currentChannel = channel;
+void TV::setChannelTo(int channel) {
+    currentChannel = channel;  
 }
-
-void TV::changeChannel(bool up){
-    currentChannel += (up ? 1 : -1);
-}
-
-void TV::open() {}
-void TV::close() {}
-void TV::display() {}
-double TV::threadLevel() { return 1.0;}
-double TV::getEnergyConsumption() { return 50.0;}

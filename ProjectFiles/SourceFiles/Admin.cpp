@@ -59,8 +59,7 @@ void Admin::addDevice(Room *room, Device *device)
 
     // If not, add it and inform of system.
     devices.push_back(device);
-    std::cout << this->getNickname() << " added a device to  " << room->getName()
-              << ": " << device->getName() << std::endl;
+    std::cout << this->getNickname() << " added a device to  " << room->getName() << ": " << device->getName() << std::endl;
 }
 
 void Admin::removeDevice(Room *room, Device *device)
@@ -73,8 +72,7 @@ void Admin::removeDevice(Room *room, Device *device)
         if (*devices[i] == *device)
         {
             devices.erase(devices.begin() + i);
-            std::cout << this->getNickname() << " removed " << device->getName()
-                      << " from " << room->getName() << "." << std::endl;
+            std::cout << this->getNickname() << " removed " << device->getName() << " from " << room->getName() << "." << std::endl;
             return;
         }
     }

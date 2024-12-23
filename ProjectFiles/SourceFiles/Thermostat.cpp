@@ -1,20 +1,27 @@
-#include "SettableDevice.h"
+#include "Thermostat.h"
 
-SettableDevice::SettableDevice(const std::string& name, int attr)
-    : Device(name), attribute(attr), deviceTimer(0) {}
+Thermostat::Thermostat(std::string name, int attr) 
+    : SettableDevice(name, attr) {}
 
-void SettableDevice::setAttribute(int attr) {
-    attribute = attr;
+void Thermostat::heatRoom(Room& room) {
+    room.setTemperature(room.getTemperature() + 1);
 }
 
-std::string SettableDevice::getAttribute() const {
-    return std::to_string(attribute);
+void Thermostat::open() { 
+   std::cout << "Thermostatat opened!" << std::endl;
+}
+void Thermostat::close() { 
+   std::cout << "Thermostatat closed!" << std::endl;
 }
 
-void SettableDevice::setTimer(int timer) {
-    deviceTimer = timer;
+void Thermostat::display() const { 
+    std::cout << "Thermostat: " << getName() << std::endl; 
 }
 
-void SettableDevice::stopTimer() {
-    deviceTimer = 0;
+double Thermostat::threadLevel() { 
+    return 0.5; 
+}
+
+double Thermostat::getEnergyConsumption() const { 
+    return 25.0; 
 }

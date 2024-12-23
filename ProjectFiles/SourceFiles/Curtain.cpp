@@ -19,5 +19,5 @@ double Curtain::getEnergyConsumption() const {
 }
 
 double Curtain::threadLevel() {
-    return 0.2;  // Örnek bir değer
+    return 0.2;
 }

@@ -31,3 +31,4 @@ void Device::setActive(bool active) {
 bool Device::operator==(Device &other) {
     return this->deviceName == other.getName();
 }
+
