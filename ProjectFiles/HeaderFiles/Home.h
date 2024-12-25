@@ -14,13 +14,18 @@ class Room;
 class Home
 {
 private:
+    Home() = default;
+    Home(const Home&) = delete;
+    Home& operator=(const Home&) = delete;
+    static Home* instance;
 
     std::vector<User *> users;
     std::vector<Room *> rooms;
 
 public:
-    Home();
     virtual ~Home() = default;
+
+    static Home* getInstance();
 
     void saveState(const std::string &file);
     void loadState(const std::string &file);
