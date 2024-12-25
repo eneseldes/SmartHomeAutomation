@@ -9,9 +9,10 @@ private:
     std::string operationType;
 
 public:
-    HasMode(const std::string &name, int attr, std::string operationType);
-    virtual void setOperationType(std::string operationType);
-    virtual std::string getOperationType() const;
+    HasMode(const std::string &name, int &attr, std::string operationType);
+    HasMode(const std::string &name, std::string operationType);
+    virtual void setOperationType(std::string operationType) = 0;
+    virtual std::string getOperationType() const = 0;
 };
 
 #endif
