@@ -12,26 +12,19 @@
 
 using namespace std;
 
-Home *home = Home::getInstance();
+Home *home = new Home();
 
 int main() {
     // Admin oluşturuluyor
     Admin *admin = new Admin("admin", 12345);
     admin->addUser(home, new User("admin", 12345));
 
-    Room* kitchen = new Room("Kitchen");
-    Room* livingRoom = new Room("LivingRoom");
-    Room* bathroom = new Room("Bathroom");
-    Room* bedroom = new Room("Bedroom");
-    Room* childRoom = new Room("ChildRoom");
-
-
     // Oda ekleniyor
-    home->getRooms().push_back(kitchen);
-    home->getRooms().push_back(livingRoom);
-    home->getRooms().push_back(bathroom);
-    home->getRooms().push_back(bedroom);
-    home->getRooms().push_back(childRoom);
+    home->getRooms().push_back(new Room("Kitchen"));
+    home->getRooms().push_back(new Room("LivingRoom"));
+    home->getRooms().push_back(new Room("Bathroom"));
+    home->getRooms().push_back(new Room("Bedroom"));
+    home->getRooms().push_back(new Room("ChildRoom"));
 
     // Kullanıcı ekleniyor
     User* user1 = new User("user1", 12345);

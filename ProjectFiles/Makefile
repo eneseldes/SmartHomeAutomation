@@ -1,9 +1,6 @@
 # Compiler
 CXX = g++
-CXXFLAGS = -std=c++11 -I"C:/fltk-1.4.0-1" -I"C:/caktigimin_fltksi" -IHeaderFiles
-
-# Linker Flags
-LDFLAGS = -L C:/caktigimin_fltksi/lib -lfltk -lcomctl32 -lole32 -luuid -lgdi32 -lws2_32 -lgdiplus -lwinspool -lcomdlg32
+CXXFLAGS = -std=c++11 -IHeaderFiles
 
 # Target
 TARGET = main.exe
