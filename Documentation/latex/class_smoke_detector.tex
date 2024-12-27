@@ -1,0 +1,199 @@
+\doxysection{Smoke\+Detector Class Reference}
+\hypertarget{class_smoke_detector}{}\label{class_smoke_detector}\index{SmokeDetector@{SmokeDetector}}
+
+
+Represents a smoke detector that monitors rooms for smoke presence.  
+
+
+
+
+{\ttfamily \#include $<$Smoke\+Detector.\+h$>$}
+
+Inheritance diagram for Smoke\+Detector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_smoke_detector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smoke_detector_a6ca7f78d3beb6fb60feb022d7d5cdeaa}{Smoke\+Detector}} (\mbox{\hyperlink{class_security_alarm}{Security\+Alarm}} \&\mbox{\hyperlink{class_security_device_a37802f094e35f558293b6592bd218209}{alarm}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_smoke_detector}{Smoke\+Detector} object with the specified security alarm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_smoke_detector_af4256e30d08ad02174af0c076c1bd55f}{detect}} (\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}room) override
+\begin{DoxyCompactList}\small\item\em Detects smoke in the given room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_smoke_detector_a875a53d6c750263d687dd91ca1898086}{display}} () const override
+\begin{DoxyCompactList}\small\item\em Displays the status of the smoke detector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_smoke_detector_a2c13aaa075164583e16b6dabf7e7d04b}{get\+Energy\+Consumption}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the energy consumption of the smoke detector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_smoke_detector_a1358bc4997bc1e3619fe4171442dcc23}{thread\+Level}} () override
+\begin{DoxyCompactList}\small\item\em Retrieves the thread level for the smoke detector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_detector}{Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_detector_ad384240b213f2deb620e56a11209357d}{Detector}} (\mbox{\hyperlink{class_security_alarm}{Security\+Alarm}} \&\mbox{\hyperlink{class_security_device_a37802f094e35f558293b6592bd218209}{alarm}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_detector}{Detector} object linked to a \doxylink{class_security_alarm}{Security\+Alarm} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_a64ba12dcc5f4267486c5d545d04dcf68}{Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes the device as inactive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_device_a2f308f1fe5e1e32b37333887eba268a4}{Device}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device}{Device} object with a specified name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_device_a6fef4f7180512c7517c9696cd95e503a}{\texorpdfstring{$\sim$}{\string~}\+Device}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup in derived classes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a}{open}} ()
+\begin{DoxyCompactList}\small\item\em Opens the device, setting it as active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1efd8ba466deb39035ee8d4d97a996d3}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes the device, setting it as inactive. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_device_a16847918d8607c8fec47ab72cc8500ff}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a203476ff55d58d4ac147072936f4eaeb}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the device is currently active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1973abf46f0e550e9843d55b7ca9b231}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ad013386d9389cbabaf245cbc651b17b3}{set\+Active}} (bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}})
+\begin{DoxyCompactList}\small\item\em Sets the active status of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a692408a9df0fc88df4eb869db4476002}{operator==}} (\mbox{\hyperlink{class_device}{Device}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two \doxylink{class_device}{Device} objects by their name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_security_device}{Security\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_security_alarm}{Security\+Alarm}} \mbox{\hyperlink{class_security_device_a37802f094e35f558293b6592bd218209}{alarm}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_device_a37bc1fcd4f0433cc899bbc835e298704}{device\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}}
+\begin{DoxyCompactList}\small\item\em The active status of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a smoke detector that monitors rooms for smoke presence. 
+
+The \doxylink{class_smoke_detector}{Smoke\+Detector} class extends the \doxylink{class_detector}{Detector} class, providing functionality to detect smoke and trigger alarms. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_smoke_detector_a6ca7f78d3beb6fb60feb022d7d5cdeaa}\index{SmokeDetector@{SmokeDetector}!SmokeDetector@{SmokeDetector}}
+\index{SmokeDetector@{SmokeDetector}!SmokeDetector@{SmokeDetector}}
+\doxysubsubsection{\texorpdfstring{SmokeDetector()}{SmokeDetector()}}
+{\footnotesize\ttfamily \label{class_smoke_detector_a6ca7f78d3beb6fb60feb022d7d5cdeaa} 
+Smoke\+Detector\+::\+Smoke\+Detector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_security_alarm}{Security\+Alarm}} \&}]{alarm}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_smoke_detector}{Smoke\+Detector} object with the specified security alarm. 
+
+Constructs a \doxylink{class_smoke_detector}{Smoke\+Detector} object with the given security alarm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em alarm} & The security alarm associated with the smoke detector.\\
+\hline
+\end{DoxyParams}
+Initializes the \doxylink{class_smoke_detector}{Smoke\+Detector} with the specified security alarm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em alarm} & The security alarm that will be triggered by the smoke detector. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_smoke_detector_af4256e30d08ad02174af0c076c1bd55f}\index{SmokeDetector@{SmokeDetector}!detect@{detect}}
+\index{detect@{detect}!SmokeDetector@{SmokeDetector}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily \label{class_smoke_detector_af4256e30d08ad02174af0c076c1bd55f} 
+void Smoke\+Detector\+::detect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}}]{room}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Detects smoke in the given room. 
+
+Detects smoke in the specified room.
+
+This method checks the room for smoke and triggers the alarm if smoke is detected.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & The room object where smoke detection will take place.\\
+\hline
+\end{DoxyParams}
+Checks if there is a risk of smoke in the room and triggers the alarm if smoke is detected.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & The room in which smoke detection will occur. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_detector_accab89c565236f6ddf6ced9318bad0dc}{Detector}}.
+
+\Hypertarget{class_smoke_detector_a875a53d6c750263d687dd91ca1898086}\index{SmokeDetector@{SmokeDetector}!display@{display}}
+\index{display@{display}!SmokeDetector@{SmokeDetector}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{class_smoke_detector_a875a53d6c750263d687dd91ca1898086} 
+void Smoke\+Detector\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays the status of the smoke detector. 
+
+This method outputs the current status of the smoke detector.
+
+Outputs information such as the device name, its active/inactive status, and the associated alarm name. 
+
+Implements \mbox{\hyperlink{class_detector_af535e897da057dcf9c976bbe5636af16}{Detector}}.
+
+\Hypertarget{class_smoke_detector_a2c13aaa075164583e16b6dabf7e7d04b}\index{SmokeDetector@{SmokeDetector}!getEnergyConsumption@{getEnergyConsumption}}
+\index{getEnergyConsumption@{getEnergyConsumption}!SmokeDetector@{SmokeDetector}}
+\doxysubsubsection{\texorpdfstring{getEnergyConsumption()}{getEnergyConsumption()}}
+{\footnotesize\ttfamily \label{class_smoke_detector_a2c13aaa075164583e16b6dabf7e7d04b} 
+double Smoke\+Detector\+::get\+Energy\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the energy consumption of the smoke detector. 
+
+\begin{DoxyReturn}{Returns}
+The energy consumption value, represented as a double.
+\end{DoxyReturn}
+The energy consumption depends on whether the smoke detector is active or not.
+
+\begin{DoxyReturn}{Returns}
+The energy consumption, where 7.\+0 is consumed when active, and 0.\+0 when inactive. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_detector_a604d07e3b72d279c3157b047e9ebc333}{Detector}}.
+
+\Hypertarget{class_smoke_detector_a1358bc4997bc1e3619fe4171442dcc23}\index{SmokeDetector@{SmokeDetector}!threadLevel@{threadLevel}}
+\index{threadLevel@{threadLevel}!SmokeDetector@{SmokeDetector}}
+\doxysubsubsection{\texorpdfstring{threadLevel()}{threadLevel()}}
+{\footnotesize\ttfamily \label{class_smoke_detector_a1358bc4997bc1e3619fe4171442dcc23} 
+double Smoke\+Detector\+::thread\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the thread level for the smoke detector. 
+
+\begin{DoxyReturn}{Returns}
+The thread level, represented as a double.
+
+The thread level for the smoke detector, represented as a double. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_detector_ab292f85cfd3205756a478198b393e1cb}{Detector}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_smoke_detector_8h}{Smoke\+Detector.\+h}}\item 
+\mbox{\hyperlink{_smoke_detector_8cpp}{Smoke\+Detector.\+cpp}}\end{DoxyCompactItemize}

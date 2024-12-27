@@ -1,0 +1,293 @@
+\doxysection{Device Class Reference}
+\hypertarget{class_device}{}\label{class_device}\index{Device@{Device}}
+
+
+Represents a general device with a name and an active status.  
+
+
+
+
+{\ttfamily \#include $<$Device.\+h$>$}
+
+Inheritance diagram for Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.786325cm]{class_device}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_a64ba12dcc5f4267486c5d545d04dcf68}{Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes the device as inactive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_device_a2f308f1fe5e1e32b37333887eba268a4}{Device}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device}{Device} object with a specified name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_device_a6fef4f7180512c7517c9696cd95e503a}{\texorpdfstring{$\sim$}{\string~}\+Device}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup in derived classes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a}{open}} ()
+\begin{DoxyCompactList}\small\item\em Opens the device, setting it as active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1efd8ba466deb39035ee8d4d97a996d3}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes the device, setting it as inactive. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_device_a81a6b84413e41787ac5295a0b3647724}{display}} () const =0
+\begin{DoxyCompactList}\small\item\em Displays the device information. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_device_a1f3676c3dad0ab90bfb4ae33b61e7c2d}{get\+Energy\+Consumption}} () const =0
+\begin{DoxyCompactList}\small\item\em Retrieves the energy consumption of the device. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_device_a053c15332a49b1c890631fb4a24525fa}{thread\+Level}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieves the thread level of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_device_a16847918d8607c8fec47ab72cc8500ff}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a203476ff55d58d4ac147072936f4eaeb}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the device is currently active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1973abf46f0e550e9843d55b7ca9b231}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ad013386d9389cbabaf245cbc651b17b3}{set\+Active}} (bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}})
+\begin{DoxyCompactList}\small\item\em Sets the active status of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a692408a9df0fc88df4eb869db4476002}{operator==}} (\mbox{\hyperlink{class_device}{Device}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two \doxylink{class_device}{Device} objects by their name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_device_a37bc1fcd4f0433cc899bbc835e298704}{device\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}}
+\begin{DoxyCompactList}\small\item\em The active status of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a general device with a name and an active status. 
+
+This class provides basic functionality for managing devices such as opening, closing, checking if they are active, and comparing devices by their names.
+
+This class provides basic functionality for managing devices such as opening, closing, checking if they are active, and comparing devices by their names. Derived classes should implement specific behavior for displaying the device, calculating energy consumption, and determining thread levels. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_device_a64ba12dcc5f4267486c5d545d04dcf68}\index{Device@{Device}!Device@{Device}}
+\index{Device@{Device}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{Device()}{Device()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_device_a64ba12dcc5f4267486c5d545d04dcf68} 
+Device\+::\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor that initializes the device as inactive. 
+
+\Hypertarget{class_device_a2f308f1fe5e1e32b37333887eba268a4}\index{Device@{Device}!Device@{Device}}
+\index{Device@{Device}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{Device()}{Device()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_device_a2f308f1fe5e1e32b37333887eba268a4} 
+Device\+::\+Device (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_device}{Device} object with a specified name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the device. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_device_a6fef4f7180512c7517c9696cd95e503a}\index{Device@{Device}!````~Device@{\texorpdfstring{$\sim$}{\string~}Device}}
+\index{````~Device@{\texorpdfstring{$\sim$}{\string~}Device}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Device()}{\string~Device()}}
+{\footnotesize\ttfamily \label{class_device_a6fef4f7180512c7517c9696cd95e503a} 
+virtual Device\+::\texorpdfstring{$\sim$}{\string~}\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for proper cleanup in derived classes. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_device_a1efd8ba466deb39035ee8d4d97a996d3}\index{Device@{Device}!close@{close}}
+\index{close@{close}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_device_a1efd8ba466deb39035ee8d4d97a996d3} 
+void Device\+::close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Closes the device, setting it as inactive. 
+
+When closed, the device is considered inactive, and a message is printed indicating the device has been closed.
+
+When closed, the device is considered inactive and a message is printed indicating the device has been closed. \Hypertarget{class_device_a81a6b84413e41787ac5295a0b3647724}\index{Device@{Device}!display@{display}}
+\index{display@{display}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{class_device_a81a6b84413e41787ac5295a0b3647724} 
+virtual void Device\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Displays the device information. 
+
+This is a pure virtual function that should be implemented in derived classes to display specific device details.
+
+\begin{DoxyNote}{Note}
+Must be implemented by derived classes. 
+\end{DoxyNote}
+
+
+Implemented in \mbox{\hyperlink{class_curtain_a1058b9c916f26de2e7ad1e56bf1ae8c1}{Curtain}}, \mbox{\hyperlink{class_detector_af535e897da057dcf9c976bbe5636af16}{Detector}}, \mbox{\hyperlink{class_dishwasher_a0bf1ebf302dbb4d215c5fda20db3c4d7}{Dishwasher}}, \mbox{\hyperlink{class_drying_machine_a001d3c3f68c2c2033e28483480c025f6}{Drying\+Machine}}, \mbox{\hyperlink{class_light_af696878b1b1ce3fe2da8d319e78d84fa}{Light}}, \mbox{\hyperlink{class_motion_detector_a6ecfaf6eac986e9b8f592ca66c893522}{Motion\+Detector}}, \mbox{\hyperlink{class_oven_aa086f2b0d1eb14a895d8e4d70e2bbf18}{Oven}}, \mbox{\hyperlink{class_security_alarm_a97997130946345ff771706d801682e82}{Security\+Alarm}}, \mbox{\hyperlink{class_security_camera_a5f8b9670c715af562ba81a21d1ad07e0}{Security\+Camera}}, \mbox{\hyperlink{class_smoke_detector_a875a53d6c750263d687dd91ca1898086}{Smoke\+Detector}}, \mbox{\hyperlink{class_thermostat_a6bef84054fbfe123dd1025065e98fbb9}{Thermostat}}, and \mbox{\hyperlink{class_t_v_ae94454349917f96c58a8f0b678bc2722}{TV}}.
+
+\Hypertarget{class_device_a1f3676c3dad0ab90bfb4ae33b61e7c2d}\index{Device@{Device}!getEnergyConsumption@{getEnergyConsumption}}
+\index{getEnergyConsumption@{getEnergyConsumption}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{getEnergyConsumption()}{getEnergyConsumption()}}
+{\footnotesize\ttfamily \label{class_device_a1f3676c3dad0ab90bfb4ae33b61e7c2d} 
+virtual double Device\+::get\+Energy\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieves the energy consumption of the device. 
+
+This is a pure virtual function that should be implemented in derived classes to calculate energy consumption for specific devices.
+
+\begin{DoxyNote}{Note}
+Must be implemented by derived classes. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The energy consumption of the device. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_curtain_a12e06c8662c964685c0dde3e94cb8e8e}{Curtain}}, \mbox{\hyperlink{class_detector_a604d07e3b72d279c3157b047e9ebc333}{Detector}}, \mbox{\hyperlink{class_dishwasher_aaa390424a901ec0892cd0cfb7a2a01bb}{Dishwasher}}, \mbox{\hyperlink{class_drying_machine_a2f2b6bf9aa631b3e9cfed2dc7edfaa06}{Drying\+Machine}}, \mbox{\hyperlink{class_light_ae54891d0309e9bcc974607812d45d3f4}{Light}}, \mbox{\hyperlink{class_motion_detector_ac2ff53a93c09b9d5686198de7c9bf1f2}{Motion\+Detector}}, \mbox{\hyperlink{class_oven_a31d5d5cb80a2a226c4cd9cf3e316438a}{Oven}}, \mbox{\hyperlink{class_security_alarm_a7deea794b3cd1cf622098fc0ad90a329}{Security\+Alarm}}, \mbox{\hyperlink{class_security_camera_ac04bdb3522f0509e831118a098dc07fb}{Security\+Camera}}, \mbox{\hyperlink{class_smoke_detector_a2c13aaa075164583e16b6dabf7e7d04b}{Smoke\+Detector}}, \mbox{\hyperlink{class_thermostat_a72216da40eac18813863107d880cb5e6}{Thermostat}}, and \mbox{\hyperlink{class_t_v_a67456428e46c6927a3440e9339ea5bc7}{TV}}.
+
+\Hypertarget{class_device_a16847918d8607c8fec47ab72cc8500ff}\index{Device@{Device}!getName@{getName}}
+\index{getName@{getName}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_device_a16847918d8607c8fec47ab72cc8500ff} 
+std\+::string Device\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the name of the device. 
+
+\begin{DoxyReturn}{Returns}
+The name of the device. 
+\end{DoxyReturn}
+\Hypertarget{class_device_a203476ff55d58d4ac147072936f4eaeb}\index{Device@{Device}!isActive@{isActive}}
+\index{isActive@{isActive}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily \label{class_device_a203476ff55d58d4ac147072936f4eaeb} 
+bool Device\+::is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the device is currently active. 
+
+\begin{DoxyReturn}{Returns}
+True if the device is active, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a}\index{Device@{Device}!open@{open}}
+\index{open@{open}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a} 
+void Device\+::open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Opens the device, setting it as active. 
+
+When opened, the device is considered active, and a message is printed indicating the device has been opened.
+
+When opened, the device is considered active and a message is printed indicating the device has been opened. \Hypertarget{class_device_a692408a9df0fc88df4eb869db4476002}\index{Device@{Device}!operator==@{operator==}}
+\index{operator==@{operator==}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_device_a692408a9df0fc88df4eb869db4476002} 
+bool Device\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_device}{Device}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Compares two \doxylink{class_device}{Device} objects by their name. 
+
+This method checks if the name of the current device matches the name of another device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other device to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if both devices have the same name, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_device_ad013386d9389cbabaf245cbc651b17b3}\index{Device@{Device}!setActive@{setActive}}
+\index{setActive@{setActive}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{setActive()}{setActive()}}
+{\footnotesize\ttfamily \label{class_device_ad013386d9389cbabaf245cbc651b17b3} 
+void Device\+::set\+Active (\begin{DoxyParamCaption}\item[{bool}]{active}{}\end{DoxyParamCaption})}
+
+
+
+Sets the active status of the device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em active} & The new active status of the device. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_device_a1973abf46f0e550e9843d55b7ca9b231}\index{Device@{Device}!setName@{setName}}
+\index{setName@{setName}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_device_a1973abf46f0e550e9843d55b7ca9b231} 
+void Device\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Sets the name of the device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The new name to be set for the device. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_device_a053c15332a49b1c890631fb4a24525fa}\index{Device@{Device}!threadLevel@{threadLevel}}
+\index{threadLevel@{threadLevel}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{threadLevel()}{threadLevel()}}
+{\footnotesize\ttfamily \label{class_device_a053c15332a49b1c890631fb4a24525fa} 
+virtual double Device\+::thread\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieves the thread level of the device. 
+
+This is a pure virtual function that should be implemented in derived classes to calculate the thread level for specific devices.
+
+\begin{DoxyNote}{Note}
+Must be implemented by derived classes. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The thread level of the device. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_curtain_ad2887e1a868871e38921af049d322457}{Curtain}}, \mbox{\hyperlink{class_detector_ab292f85cfd3205756a478198b393e1cb}{Detector}}, \mbox{\hyperlink{class_dishwasher_adfe20020185988ed9e68e507ee6ae129}{Dishwasher}}, \mbox{\hyperlink{class_drying_machine_aa7e437ab0b791ff49fbeaf9fcbf0b378}{Drying\+Machine}}, \mbox{\hyperlink{class_light_a2a31f39296a8c724991a33d198fd3336}{Light}}, \mbox{\hyperlink{class_motion_detector_a96672519ef0c93d96a070dc997308684}{Motion\+Detector}}, \mbox{\hyperlink{class_oven_a030cf6e1af0a09160fc3846712a4f5ef}{Oven}}, \mbox{\hyperlink{class_security_alarm_aa4433b071056f738c79400c84e0706ed}{Security\+Alarm}}, \mbox{\hyperlink{class_security_camera_abb7d83218faa7fbbbeb79a42c3c96820}{Security\+Camera}}, \mbox{\hyperlink{class_smoke_detector_a1358bc4997bc1e3619fe4171442dcc23}{Smoke\+Detector}}, \mbox{\hyperlink{class_thermostat_a6c7d313e6dc08f888a2c420fcec06776}{Thermostat}}, and \mbox{\hyperlink{class_t_v_ae5e79ae83c9233c8031f796de94d049e}{TV}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_device_ac6c8534a9c755b5ee9affc37771a301d}\index{Device@{Device}!active@{active}}
+\index{active@{active}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily \label{class_device_ac6c8534a9c755b5ee9affc37771a301d} 
+bool Device\+::active\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The active status of the device. 
+
+\Hypertarget{class_device_a37bc1fcd4f0433cc899bbc835e298704}\index{Device@{Device}!deviceName@{deviceName}}
+\index{deviceName@{deviceName}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{deviceName}{deviceName}}
+{\footnotesize\ttfamily \label{class_device_a37bc1fcd4f0433cc899bbc835e298704} 
+std\+::string Device\+::device\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The name of the device. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_device_8h}{Device.\+h}}\item 
+\mbox{\hyperlink{_device_8cpp}{Device.\+cpp}}\end{DoxyCompactItemize}

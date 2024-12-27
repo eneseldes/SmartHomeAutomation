@@ -1,0 +1,41 @@
+\doxysection{Washing\+Machine.\+h}
+\hypertarget{_washing_machine_8h_source}{}\label{_washing_machine_8h_source}\mbox{\hyperlink{_washing_machine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WASHINGMACHINE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WASHINGMACHINE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_has_mode_8h}{HasMode.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_washing_machine}{WashingMachine}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_has_mode}{HasMode}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_washing_machine_a174dc47d8aac461144e47542e704cf06}{cycleValue}}\ =\ 800;\ /<\ The\ spin\ cycle\ value\ in\ RPM.\ Default\ is\ 800.\ */}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ temperature;\ \ \ \ \ \ /<\ The\ washing\ temperature\ in\ degrees\ Celsius.\ */}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_washing_machine}{WashingMachine}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_has_mode_af346155b61989061fd6bf776cadd32dd}{setMode}}(std::string\ \mbox{\hyperlink{class_has_mode_adec03ee7a1f2cb05b90a4e8557dc8459}{operationType}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ std::string\ \mbox{\hyperlink{class_has_mode_aeb84eb09fb9dac660e63f47ae07d2e9e}{getMode}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_a81a6b84413e41787ac5295a0b3647724}{display}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_device_a053c15332a49b1c890631fb4a24525fa}{threadLevel}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_device_a1f3676c3dad0ab90bfb4ae33b61e7c2d}{getEnergyConsumption}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ setCycleValue(\textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ getCycleValue()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ setTemperature(\textcolor{keywordtype}{int}\ temperature);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ getTemperature();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_has_mode_af705f255a0c51d36909478d52ddf6a7e}{reset}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00096\ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WASHINGMACHINE\_H}}
+
+\end{DoxyCode}

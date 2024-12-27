@@ -1,0 +1,45 @@
+\doxysection{Home.\+h}
+\hypertarget{_home_8h_source}{}\label{_home_8h_source}\mbox{\hyperlink{_home_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HOME\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HOME\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_user_8h}{User.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_room_8h}{Room.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Forward\ declarations\ for\ User\ and\ Room\ classes}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_user}{User}};}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_room}{Room}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_home}{Home}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_home_a5d44be1b3ccc10e7611de94f6992fa82}{Home}}()\ =\ \textcolor{keywordflow}{default};\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_home_a96f1b04772b067f47f736204c642f636}{Home}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_home}{Home}}\&)\ =\ \textcolor{keyword}{delete};\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_home}{Home}}\&\ \mbox{\hyperlink{class_home_a6971706aaee2933230cf5c69bffadfe4}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_home}{Home}}\&)\ =\ \textcolor{keyword}{delete};\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_home}{Home}}*\ \mbox{\hyperlink{class_home_ab970b007569698fdbc8b01c9840973c3}{instance}};\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ std::vector<User\ *>\ \mbox{\hyperlink{class_home_a3bf89e4f507b428155526588883e9a6b}{users}};\ }
+\DoxyCodeLine{00032\ \ \ \ \ std::vector<Room\ *>\ \mbox{\hyperlink{class_home_ae978440bd1c59da1c7adef5227a15a01}{rooms}};\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_home_aa87f051efc8b9ef17a214b7602479dcc}{\string~Home}}()\ =\ \textcolor{keywordflow}{default};\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_home}{Home}}*\ \mbox{\hyperlink{class_home_a40ebc1deab44ca1b4951cd52012d5b9a}{getInstance}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_home_a4f703e58090c9c8224aaf7b2f3bde844}{saveState}}(\textcolor{keyword}{const}\ std::string\ \&file);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_home_a69599572a856d29f6cdd84278ae435b1}{loadState}}(\textcolor{keyword}{const}\ std::string\ \&file);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ std::vector<User\ *>\&\ \mbox{\hyperlink{class_home_ae8f699b5656b3a4d6aaf40b88c919aae}{getUsers}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ std::vector<Room\ *>\&\ \mbox{\hyperlink{class_home_a202bd92cc73fb5b7b442739e29b8d997}{getRooms}}();}
+\DoxyCodeLine{00078\ \};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,49 @@
+\doxysection{Room.\+h}
+\hypertarget{_room_8h_source}{}\label{_room_8h_source}\mbox{\hyperlink{_room_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ROOM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ROOM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_device_8h}{Device.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_user_8h}{User.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_room}{Room}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \mbox{\hyperlink{class_room_a72dc5f84fd63eb54d53bc9d992ca6dcb}{name}};\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_room_a7055433da327f4d9a911dc2653dfb26e}{temperature}};\ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_room_ad98f35d12715fcb464ca61a68688f19e}{airCondition}};\ }
+\DoxyCodeLine{00024\ \ \ \ \ std::vector<Device\ *>\ \mbox{\hyperlink{class_room_a3b5a022cb5e38a7872430501a0189101}{devices}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ std::vector<User\ *>\ \mbox{\hyperlink{class_room_afa2dcad09e07060b5af73f4fe76ef2bf}{users}};\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_room_ab932b4d5bafaac3998fcead3baafea08}{Room}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_room_a72dc5f84fd63eb54d53bc9d992ca6dcb}{name}});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_room_a508697104b1bdce37058c029ea5d7b2b}{\string~Room}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_room_a38ba402a45f57fe1b53b4ecf1accbc09}{hasRisk}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_room_a9ef234056ed6ff8c7c777061f7079027}{hasUsers}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_room_a5d63c2136ca00c4c8bc6c101f03220ae}{getTemperature}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_room_a83be7f2086f876d4fcd31e190fafc98e}{getAirCondition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ std::string\ \mbox{\hyperlink{class_room_a767de198f529425dd4ba81810e44d6e4}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ std::vector<Device\ *>\&\ \mbox{\hyperlink{class_room_a6911381f29d077cf9e4b835b41b3c03e}{getDevices}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \ std::vector<User\ *>\&\ \mbox{\hyperlink{class_room_a4e02c28732d478c277c104e2c31dbdd2}{getUsers}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_abf73b1f0a003a9dd5739ef7814f41203}{setTemperature}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_room_a7055433da327f4d9a911dc2653dfb26e}{temperature}});}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_a3c5675360c31fb4cc134484a55b80b04}{setAirCondition}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_room_ad98f35d12715fcb464ca61a68688f19e}{airCondition}});}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_room_a8f0cbb398c69d78be818923df8580f73}{operator==}}(\mbox{\hyperlink{class_room}{Room}}\ \&other);}
+\DoxyCodeLine{00118\ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ROOM\_H}}
+
+\end{DoxyCode}

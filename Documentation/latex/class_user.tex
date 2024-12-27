@@ -1,0 +1,347 @@
+\doxysection{User Class Reference}
+\hypertarget{class_user}{}\label{class_user}\index{User@{User}}
+
+
+Represents a user in the smart home system.  
+
+
+
+
+{\ttfamily \#include $<$User.\+h$>$}
+
+Inheritance diagram for User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_user}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_a6abffd447fa391c05bbf615530267d34}{User}} (const std\+::string \&\mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}}, const std\+::string \&\mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_user}{User} object with a specified nickname and password. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_abd0acf1cac003d7de8dc47160e344c9a}{login}} (\mbox{\hyperlink{class_home}{Home}} home, const std\+::string \&\mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}}, std\+::string \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Logs in the user by checking if the provided nickname and password match the stored credentials. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a8fa2727f0e5b08b35f535fd02e2a7c62}{logout}} (\mbox{\hyperlink{class_home}{Home}} home)
+\begin{DoxyCompactList}\small\item\em Logs out the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_aaca9b079ec4b72367e2b2a6084968286}{visit\+Room}} (\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}room)
+\begin{DoxyCompactList}\small\item\em Makes the user visit a new room. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_aa046b1ada1d07e4b1d77c7f89fc082f0}{get\+Nickname}} ()
+\begin{DoxyCompactList}\small\item\em Gets the user\textquotesingle{}s nickname. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_aad2f2d9649b5b0aaf451423abf93c63b}{get\+Password}} ()
+\begin{DoxyCompactList}\small\item\em Gets the user\textquotesingle{}s password. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_user_a190f4e1e30160712a26b36a65f914243}{is\+Logged\+In}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the user is logged in. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_user_af3148660c9c0275a4ee6ce03687d0624}{get\+Current\+Room}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current room the user is in. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_aea732a4dfd5e84578e7b717e9028fdc7}{set\+Nickname}} (const std\+::string \&\mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}})
+\begin{DoxyCompactList}\small\item\em Sets the user\textquotesingle{}s nickname. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a186d574de4e737b3a7c1c1e9eec93b33}{set\+Password}} (std\+::string \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Sets the user\textquotesingle{}s password. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_ad382ad3042909711d9d2656f9b839368}{set\+Logged\+In}} (bool \mbox{\hyperlink{class_user_a4db95f173a2e350867480e2239c816a8}{logged\+In}})
+\begin{DoxyCompactList}\small\item\em Sets the logged-\/in status of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a06cc3c812a5c4a23ce20b36793ea6b30}{set\+Current\+Room}} (\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}room)
+\begin{DoxyCompactList}\small\item\em Sets the current room for the user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_user_afe2d5cd8f5567a5e04d23780857e7e57}{operator==}} (\mbox{\hyperlink{class_user}{User}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two users by their nicknames. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}}
+\begin{DoxyCompactList}\small\item\em The user\textquotesingle{}s nickname. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}}
+\begin{DoxyCompactList}\small\item\em The user\textquotesingle{}s password. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_user_a4db95f173a2e350867480e2239c816a8}{logged\+In}} = false
+\begin{DoxyCompactList}\small\item\em The user\textquotesingle{}s login status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_user_a1af1fa87e5a23ec2f5bbdc1d34e3fea2}{current\+Room}}
+\begin{DoxyCompactList}\small\item\em The room the user is currently in. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a user in the smart home system. 
+
+The \doxylink{class_user}{User} class manages user information such as nickname, password, and current room. It allows users to log in, log out, and visit different rooms in the system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_user_a6abffd447fa391c05bbf615530267d34}\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily \label{class_user_a6abffd447fa391c05bbf615530267d34} 
+User\+::\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nickname}{, }\item[{const std\+::string \&}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_user}{User} object with a specified nickname and password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nickname} & The nickname of the user. \\
+\hline
+{\em password} & The password of the user.\\
+\hline
+\end{DoxyParams}
+Initializes the user with the provided nickname and password. The user is assigned to the "{}\+Outside"{} room by default.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nickname} & The nickname of the user. \\
+\hline
+{\em password} & The password of the user. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_user_af3148660c9c0275a4ee6ce03687d0624}\index{User@{User}!getCurrentRoom@{getCurrentRoom}}
+\index{getCurrentRoom@{getCurrentRoom}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getCurrentRoom()}{getCurrentRoom()}}
+{\footnotesize\ttfamily \label{class_user_af3148660c9c0275a4ee6ce03687d0624} 
+\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*} User\+::get\+Current\+Room (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current room the user is in. 
+
+\begin{DoxyReturn}{Returns}
+Room\texorpdfstring{$\ast$}{*} A pointer to the current room the user is in. 
+\end{DoxyReturn}
+\Hypertarget{class_user_aa046b1ada1d07e4b1d77c7f89fc082f0}\index{User@{User}!getNickname@{getNickname}}
+\index{getNickname@{getNickname}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getNickname()}{getNickname()}}
+{\footnotesize\ttfamily \label{class_user_aa046b1ada1d07e4b1d77c7f89fc082f0} 
+std\+::string User\+::get\+Nickname (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the user\textquotesingle{}s nickname. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The user\textquotesingle{}s nickname. 
+\end{DoxyReturn}
+\Hypertarget{class_user_aad2f2d9649b5b0aaf451423abf93c63b}\index{User@{User}!getPassword@{getPassword}}
+\index{getPassword@{getPassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getPassword()}{getPassword()}}
+{\footnotesize\ttfamily \label{class_user_aad2f2d9649b5b0aaf451423abf93c63b} 
+std\+::string User\+::get\+Password (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the user\textquotesingle{}s password. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The user\textquotesingle{}s password. 
+\end{DoxyReturn}
+\Hypertarget{class_user_a190f4e1e30160712a26b36a65f914243}\index{User@{User}!isLoggedIn@{isLoggedIn}}
+\index{isLoggedIn@{isLoggedIn}!User@{User}}
+\doxysubsubsection{\texorpdfstring{isLoggedIn()}{isLoggedIn()}}
+{\footnotesize\ttfamily \label{class_user_a190f4e1e30160712a26b36a65f914243} 
+bool User\+::is\+Logged\+In (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the user is logged in. 
+
+\begin{DoxyReturn}{Returns}
+bool True if the user is logged in, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_user_abd0acf1cac003d7de8dc47160e344c9a}\index{User@{User}!login@{login}}
+\index{login@{login}!User@{User}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily \label{class_user_abd0acf1cac003d7de8dc47160e344c9a} 
+void User\+::login (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_home}{Home}}}]{home}{, }\item[{const std\+::string \&}]{nickname}{, }\item[{std\+::string}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Logs in the user by checking if the provided nickname and password match the stored credentials. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em home} & The home object that the user will log into (though not used in the function). \\
+\hline
+{\em nickname} & The nickname of the user attempting to log in. \\
+\hline
+{\em password} & The password of the user attempting to log in.\\
+\hline
+\end{DoxyParams}
+If the provided nickname and password match the user\textquotesingle{}s data, the user is logged in and a message is displayed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em home} & The home object that the user will log into (though not used in the function). \\
+\hline
+{\em nickname} & The nickname of the user attempting to log in. \\
+\hline
+{\em password} & The password of the user attempting to log in. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_a8fa2727f0e5b08b35f535fd02e2a7c62}\index{User@{User}!logout@{logout}}
+\index{logout@{logout}!User@{User}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily \label{class_user_a8fa2727f0e5b08b35f535fd02e2a7c62} 
+void User\+::logout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_home}{Home}}}]{home}{}\end{DoxyParamCaption})}
+
+
+
+Logs out the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em home} & The home object the user is logged out from (though not used in the function).\\
+\hline
+\end{DoxyParams}
+Sets the logged-\/in status to false and outputs a message indicating the user has logged out.
+
+
+\begin{DoxyParams}{Parameters}
+{\em home} & The home object the user is logged out from (though not used in the function). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_afe2d5cd8f5567a5e04d23780857e7e57}\index{User@{User}!operator==@{operator==}}
+\index{operator==@{operator==}!User@{User}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_user_afe2d5cd8f5567a5e04d23780857e7e57} 
+bool User\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Compares two users by their nicknames. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other user to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if the nicknames of both users are the same, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_user_a06cc3c812a5c4a23ce20b36793ea6b30}\index{User@{User}!setCurrentRoom@{setCurrentRoom}}
+\index{setCurrentRoom@{setCurrentRoom}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setCurrentRoom()}{setCurrentRoom()}}
+{\footnotesize\ttfamily \label{class_user_a06cc3c812a5c4a23ce20b36793ea6b30} 
+void User\+::set\+Current\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}}]{room}{}\end{DoxyParamCaption})}
+
+
+
+Sets the current room for the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & A pointer to the room to set as the user\textquotesingle{}s current room. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_ad382ad3042909711d9d2656f9b839368}\index{User@{User}!setLoggedIn@{setLoggedIn}}
+\index{setLoggedIn@{setLoggedIn}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setLoggedIn()}{setLoggedIn()}}
+{\footnotesize\ttfamily \label{class_user_ad382ad3042909711d9d2656f9b839368} 
+void User\+::set\+Logged\+In (\begin{DoxyParamCaption}\item[{bool}]{logged\+In}{}\end{DoxyParamCaption})}
+
+
+
+Sets the logged-\/in status of the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logged\+In} & True if the user is logged in, false otherwise. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_aea732a4dfd5e84578e7b717e9028fdc7}\index{User@{User}!setNickname@{setNickname}}
+\index{setNickname@{setNickname}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setNickname()}{setNickname()}}
+{\footnotesize\ttfamily \label{class_user_aea732a4dfd5e84578e7b717e9028fdc7} 
+void User\+::set\+Nickname (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nickname}{}\end{DoxyParamCaption})}
+
+
+
+Sets the user\textquotesingle{}s nickname. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nickname} & The new nickname for the user. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_a186d574de4e737b3a7c1c1e9eec93b33}\index{User@{User}!setPassword@{setPassword}}
+\index{setPassword@{setPassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
+{\footnotesize\ttfamily \label{class_user_a186d574de4e737b3a7c1c1e9eec93b33} 
+void User\+::set\+Password (\begin{DoxyParamCaption}\item[{std\+::string}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Sets the user\textquotesingle{}s password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & The new password for the user. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_aaca9b079ec4b72367e2b2a6084968286}\index{User@{User}!visitRoom@{visitRoom}}
+\index{visitRoom@{visitRoom}!User@{User}}
+\doxysubsubsection{\texorpdfstring{visitRoom()}{visitRoom()}}
+{\footnotesize\ttfamily \label{class_user_aaca9b079ec4b72367e2b2a6084968286} 
+void User\+::visit\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}}]{room}{}\end{DoxyParamCaption})}
+
+
+
+Makes the user visit a new room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & The room the user wishes to visit.\\
+\hline
+\end{DoxyParams}
+If the user tries to enter the room they are already in, a message is displayed. Otherwise, the user leaves the current room and enters the new room. The user\textquotesingle{}s current room is updated accordingly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & The room the user wishes to visit. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_user_a1af1fa87e5a23ec2f5bbdc1d34e3fea2}\index{User@{User}!currentRoom@{currentRoom}}
+\index{currentRoom@{currentRoom}!User@{User}}
+\doxysubsubsection{\texorpdfstring{currentRoom}{currentRoom}}
+{\footnotesize\ttfamily \label{class_user_a1af1fa87e5a23ec2f5bbdc1d34e3fea2} 
+\mbox{\hyperlink{class_room}{Room}}\texorpdfstring{$\ast$}{*} User\+::current\+Room\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The room the user is currently in. 
+
+\Hypertarget{class_user_a4db95f173a2e350867480e2239c816a8}\index{User@{User}!loggedIn@{loggedIn}}
+\index{loggedIn@{loggedIn}!User@{User}}
+\doxysubsubsection{\texorpdfstring{loggedIn}{loggedIn}}
+{\footnotesize\ttfamily \label{class_user_a4db95f173a2e350867480e2239c816a8} 
+bool User\+::logged\+In = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The user\textquotesingle{}s login status. 
+
+\Hypertarget{class_user_aebdb6953485740c33307118f91156832}\index{User@{User}!nickname@{nickname}}
+\index{nickname@{nickname}!User@{User}}
+\doxysubsubsection{\texorpdfstring{nickname}{nickname}}
+{\footnotesize\ttfamily \label{class_user_aebdb6953485740c33307118f91156832} 
+std\+::string User\+::nickname\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The user\textquotesingle{}s nickname. 
+
+\Hypertarget{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}\index{User@{User}!password@{password}}
+\index{password@{password}!User@{User}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily \label{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f} 
+std\+::string User\+::password\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The user\textquotesingle{}s password. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_user_8h}{User.\+h}}\item 
+\mbox{\hyperlink{_user_8cpp}{User.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,34 @@
+\doxysection{Settable\+Device.\+h}
+\hypertarget{_settable_device_8h_source}{}\label{_settable_device_8h_source}\mbox{\hyperlink{_settable_device_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SETTABLEDEVICE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SETTABLEDEVICE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_device_8h}{Device.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_settable_device}{SettableDevice}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_device}{Device}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_settable_device_a5213b25cc0e342b947c07b5157c4343c}{attribute}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_settable_device_aa86a12fb663189c7330b0e6456e91b67}{lowerBound}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_settable_device_a7b6a430622c92fcedbad9a7692e5f57f}{upperBound}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ \mbox{\hyperlink{class_settable_device_a34adea0786fa7f04ccbdf82528555902}{attributeName}};\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_settable_device_a54b3e852da55272f070a2d7ee8da2ac2}{SettableDevice}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_settable_device_ac05d519f05dab32a14f8410311d99f78}{setAttribute}}(\textcolor{keywordtype}{int}\ attr);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_settable_device_a038b6847b7467cc50c3d8ff593a74c3e}{getAttribute}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_settable_device_ab37e23623aa98be56ff7cab06b47c59a}{getLowerBound}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_settable_device_a618094aaa0cad060497900fa0f7001a5}{getUpperBound}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ \ \ \ \ std::string\ \mbox{\hyperlink{class_settable_device_a29dac4b1f347dd8e0478a323b27aa8c6}{getAttributeName}}();}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

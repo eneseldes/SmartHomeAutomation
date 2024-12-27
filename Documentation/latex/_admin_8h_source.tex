@@ -1,0 +1,36 @@
+\doxysection{Admin.\+h}
+\hypertarget{_admin_8h_source}{}\label{_admin_8h_source}\mbox{\hyperlink{_admin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ADMIN\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ADMIN\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_user_8h}{User.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Forward\ declarations}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_home}{Home}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_room}{Room}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_admin}{Admin}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_user}{User}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_admin_a9b0aa09800cca9aca971d64032cbf4f8}{Admin}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}},\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_admin_a3dd608cf17a49184b9f0b1da3c90c77c}{addUser}}(\mbox{\hyperlink{class_home}{Home}}\ *home,\ \mbox{\hyperlink{class_user}{User}}\ *user);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_admin_a3dd608cf17a49184b9f0b1da3c90c77c}{addUser}}(\mbox{\hyperlink{class_home}{Home}}*\ home,\ std::string\ name,\ std::string\ \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_admin_af5bbef0735cb16c95a38f7d8bdfa3cac}{removeUser}}(\mbox{\hyperlink{class_home}{Home}}\ *home,\ \mbox{\hyperlink{class_user}{User}}\ *user);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_admin_af5bbef0735cb16c95a38f7d8bdfa3cac}{removeUser}}(\mbox{\hyperlink{class_home}{Home}}*\ home,\ std::string\&\ \mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_admin_add7047c934e268997ec45eafc93e29c4}{addDevice}}(\mbox{\hyperlink{class_room}{Room}}\ *room,\ \mbox{\hyperlink{class_device}{Device}}\ *device);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_admin_add7047c934e268997ec45eafc93e29c4}{addDevice}}(\mbox{\hyperlink{class_home}{Home}}*\ home,\ std::string\ roomName,\ std::string\ deviceName);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_admin_abcb61a617334308255a1fb5cf1c1e6aa}{removeDevice}}(\mbox{\hyperlink{class_room}{Room}}\ *room,\ \mbox{\hyperlink{class_device}{Device}}\ *device);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_admin_abcb61a617334308255a1fb5cf1c1e6aa}{removeDevice}}(\mbox{\hyperlink{class_home}{Home}}*\ home,\ std::string\ roomName,\ std::string\ deviceName);}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ADMIN\_H}}
+
+\end{DoxyCode}

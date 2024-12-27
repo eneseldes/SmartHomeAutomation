@@ -1,0 +1,30 @@
+\doxysection{Security\+Camera.\+h}
+\hypertarget{_security_camera_8h_source}{}\label{_security_camera_8h_source}\mbox{\hyperlink{_security_camera_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SECURITYCAMERA\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SECURITYCAMERA\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_security_device_8h}{SecurityDevice.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_motion_detector_8h}{MotionDetector.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_room_8h}{Room.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_security_alarm_8h}{SecurityAlarm.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_security_camera}{SecurityCamera}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_security_device}{SecurityDevice}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_motion_detector}{MotionDetector}}*\ \mbox{\hyperlink{class_security_camera_ae2289bd68f0b9781e6bcb0b42d794cb2}{motionDetector}};\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_security_camera_a5c6f1bef10e215a864d232922551b8ea}{SecurityCamera}}(\mbox{\hyperlink{class_security_alarm}{SecurityAlarm}}*\ \mbox{\hyperlink{class_security_device_a37802f094e35f558293b6592bd218209}{alarm}},\ \mbox{\hyperlink{class_motion_detector}{MotionDetector}}*\ \mbox{\hyperlink{class_security_camera_ae2289bd68f0b9781e6bcb0b42d794cb2}{motionDetector}});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_security_camera_a9de1c6637d84155ceee35c342c3c9455}{detect}}(\mbox{\hyperlink{class_room}{Room}}*\ room);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_security_camera_a5f8b9670c715af562ba81a21d1ad07e0}{display}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_security_camera_ac04bdb3522f0509e831118a098dc07fb}{getEnergyConsumption}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_security_camera_abb7d83218faa7fbbbeb79a42c3c96820}{threadLevel}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SECURITYCAMERA\_H}}
+
+\end{DoxyCode}

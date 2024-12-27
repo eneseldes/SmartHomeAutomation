@@ -1,0 +1,201 @@
+\doxysection{Motion\+Detector Class Reference}
+\hypertarget{class_motion_detector}{}\label{class_motion_detector}\index{MotionDetector@{MotionDetector}}
+
+
+A class representing a motion detector that triggers an alarm when motion is detected.  
+
+
+
+
+{\ttfamily \#include $<$Motion\+Detector.\+h$>$}
+
+Inheritance diagram for Motion\+Detector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_motion_detector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_motion_detector_a6a7a9319abf73591ea117bd46bd6719c}{Motion\+Detector}} (\mbox{\hyperlink{class_security_alarm}{Security\+Alarm}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_security_device_a37802f094e35f558293b6592bd218209}{alarm}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_motion_detector}{Motion\+Detector} with the given alarm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_detector_acffb9f5907df4b3d1a1d563f48be10a9}{detect}} (\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}room) override
+\begin{DoxyCompactList}\small\item\em Detects motion in the specified room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_detector_a6ecfaf6eac986e9b8f592ca66c893522}{display}} () const override
+\begin{DoxyCompactList}\small\item\em Displays information about the motion detector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_motion_detector_ac2ff53a93c09b9d5686198de7c9bf1f2}{get\+Energy\+Consumption}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the energy consumption of the motion detector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_motion_detector_a96672519ef0c93d96a070dc997308684}{thread\+Level}} () override
+\begin{DoxyCompactList}\small\item\em Gets the thread level associated with the motion detector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_detector}{Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_detector_ad384240b213f2deb620e56a11209357d}{Detector}} (\mbox{\hyperlink{class_security_alarm}{Security\+Alarm}} \&\mbox{\hyperlink{class_security_device_a37802f094e35f558293b6592bd218209}{alarm}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_detector}{Detector} object linked to a \doxylink{class_security_alarm}{Security\+Alarm} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_a64ba12dcc5f4267486c5d545d04dcf68}{Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes the device as inactive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_device_a2f308f1fe5e1e32b37333887eba268a4}{Device}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device}{Device} object with a specified name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_device_a6fef4f7180512c7517c9696cd95e503a}{\texorpdfstring{$\sim$}{\string~}\+Device}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup in derived classes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a}{open}} ()
+\begin{DoxyCompactList}\small\item\em Opens the device, setting it as active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1efd8ba466deb39035ee8d4d97a996d3}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes the device, setting it as inactive. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_device_a16847918d8607c8fec47ab72cc8500ff}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a203476ff55d58d4ac147072936f4eaeb}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the device is currently active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1973abf46f0e550e9843d55b7ca9b231}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ad013386d9389cbabaf245cbc651b17b3}{set\+Active}} (bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}})
+\begin{DoxyCompactList}\small\item\em Sets the active status of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a692408a9df0fc88df4eb869db4476002}{operator==}} (\mbox{\hyperlink{class_device}{Device}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two \doxylink{class_device}{Device} objects by their name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_security_device}{Security\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_security_alarm}{Security\+Alarm}} \mbox{\hyperlink{class_security_device_a37802f094e35f558293b6592bd218209}{alarm}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_device_a37bc1fcd4f0433cc899bbc835e298704}{device\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}}
+\begin{DoxyCompactList}\small\item\em The active status of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a motion detector that triggers an alarm when motion is detected. 
+
+The \doxylink{class_motion_detector}{Motion\+Detector} class is a specialized type of detector that checks for motion in a room. If motion is detected, it triggers the associated alarm. This class inherits from the \doxylink{class_detector}{Detector} class and implements its abstract methods. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_motion_detector_a6a7a9319abf73591ea117bd46bd6719c}\index{MotionDetector@{MotionDetector}!MotionDetector@{MotionDetector}}
+\index{MotionDetector@{MotionDetector}!MotionDetector@{MotionDetector}}
+\doxysubsubsection{\texorpdfstring{MotionDetector()}{MotionDetector()}}
+{\footnotesize\ttfamily \label{class_motion_detector_a6a7a9319abf73591ea117bd46bd6719c} 
+Motion\+Detector\+::\+Motion\+Detector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_security_alarm}{Security\+Alarm}} \texorpdfstring{$\ast$}{*}}]{alarm}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_motion_detector}{Motion\+Detector} with the given alarm. 
+
+This constructor initializes the \doxylink{class_motion_detector}{Motion\+Detector} with an associated \doxylink{class_security_alarm}{Security\+Alarm}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em alarm} & A pointer to the \doxylink{class_security_alarm}{Security\+Alarm} that will be triggered when motion is detected. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_motion_detector_acffb9f5907df4b3d1a1d563f48be10a9}\index{MotionDetector@{MotionDetector}!detect@{detect}}
+\index{detect@{detect}!MotionDetector@{MotionDetector}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily \label{class_motion_detector_acffb9f5907df4b3d1a1d563f48be10a9} 
+void Motion\+Detector\+::detect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}}]{room}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Detects motion in the specified room. 
+
+Detects motion in a room and triggers the associated alarm.
+
+This method checks if the room has users and triggers the alarm if motion is detected. If no motion is detected, it reports that the room is safe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & The room in which motion is being detected.\\
+\hline
+\end{DoxyParams}
+This method checks if there are users in the room. If there are users, it triggers the alarm to ring. Otherwise, it reports that no motion was detected.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & The room in which motion is being detected. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_detector_accab89c565236f6ddf6ced9318bad0dc}{Detector}}.
+
+\Hypertarget{class_motion_detector_a6ecfaf6eac986e9b8f592ca66c893522}\index{MotionDetector@{MotionDetector}!display@{display}}
+\index{display@{display}!MotionDetector@{MotionDetector}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{class_motion_detector_a6ecfaf6eac986e9b8f592ca66c893522} 
+void Motion\+Detector\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays information about the motion detector. 
+
+This method displays the name, status, and associated alarm of the motion detector.
+
+This method displays the name, status (active or inactive), and the associated alarm of the motion detector. 
+
+Implements \mbox{\hyperlink{class_detector_af535e897da057dcf9c976bbe5636af16}{Detector}}.
+
+\Hypertarget{class_motion_detector_ac2ff53a93c09b9d5686198de7c9bf1f2}\index{MotionDetector@{MotionDetector}!getEnergyConsumption@{getEnergyConsumption}}
+\index{getEnergyConsumption@{getEnergyConsumption}!MotionDetector@{MotionDetector}}
+\doxysubsubsection{\texorpdfstring{getEnergyConsumption()}{getEnergyConsumption()}}
+{\footnotesize\ttfamily \label{class_motion_detector_ac2ff53a93c09b9d5686198de7c9bf1f2} 
+double Motion\+Detector\+::get\+Energy\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the energy consumption of the motion detector. 
+
+This method returns the energy consumption of the motion detector in watts. If the detector is active, it returns a positive value; otherwise, it returns zero.
+
+\begin{DoxyReturn}{Returns}
+double The energy consumption of the motion detector in watts.
+\end{DoxyReturn}
+This method returns the energy consumption of the motion detector in watts. It returns a higher value if the detector is active, and 0 if inactive.
+
+\begin{DoxyReturn}{Returns}
+double The energy consumption of the motion detector. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_detector_a604d07e3b72d279c3157b047e9ebc333}{Detector}}.
+
+\Hypertarget{class_motion_detector_a96672519ef0c93d96a070dc997308684}\index{MotionDetector@{MotionDetector}!threadLevel@{threadLevel}}
+\index{threadLevel@{threadLevel}!MotionDetector@{MotionDetector}}
+\doxysubsubsection{\texorpdfstring{threadLevel()}{threadLevel()}}
+{\footnotesize\ttfamily \label{class_motion_detector_a96672519ef0c93d96a070dc997308684} 
+double Motion\+Detector\+::thread\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the thread level associated with the motion detector. 
+
+Gets the thread level for processing.
+
+This method returns the processing thread level for the motion detector.
+
+\begin{DoxyReturn}{Returns}
+double The thread level of the motion detector.
+\end{DoxyReturn}
+This method provides the thread level associated with the motion detector. It returns a predefined thread level value.
+
+\begin{DoxyReturn}{Returns}
+double The processing thread level (e.\+g., 15.\+5). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_detector_ab292f85cfd3205756a478198b393e1cb}{Detector}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_motion_detector_8h}{Motion\+Detector.\+h}}\item 
+\mbox{\hyperlink{_motion_detector_8cpp}{Motion\+Detector.\+cpp}}\end{DoxyCompactItemize}

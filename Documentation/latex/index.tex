@@ -1,0 +1,40 @@
+\chapter{Smart Home System}
+\hypertarget{index}{}\label{index}\index{Smart Home System@{Smart Home System}}
+\label{index_md_ana__sayfa}%
+\Hypertarget{index_md_ana__sayfa}%
+
+
+Installation and Setup (Visual Studio)\+:
+
+1) First, download and install the latest version of Visual Studio.
+
+2) During the installation process, on the "{}\+Workloads"{} page, select the "{}\+Desktop Development with C++"{} option.
+
+3) In addition to the default selected features, on the "{}\+Individual Components"{} page, make sure to select "{}\+C++/\+CLI support for v142 build tools."{} In the "{}\+Installation details"{} section, also select "{}.\+NET Framework 4.\+8 SDK,"{} "{}.\+NET Framework 4.\+7.\+2 Targeting Pack,"{} and the "{}v142 build tools."{}
+
+4) After the installation completes, create a new project using the "{}\+CLR Empty Project (.\+NET Framework)"{} template.
+
+5) Then, in the "{}\+Project Properties"{} section, go to "{}\+Linker -\/ System"{} and set the "{}\+Sub\+System"{} to "{}\+Windows"{}. In the Project Properties page, under Linker -\/ Advanced, the Entry Point should be set to "{}main"{}.
+
+6) Next, add a new item to the project by selecting "{}\+Add New Item"{} and choosing "{}\+UI,"{} then create a Windows Form structure.
+
+7) To make the My\+Form.\+cpp file work, the following code should be added\+:
+
+using namespace System; using namespace System\+::\+Windows\+::\+Forms;
+
+\mbox{[}STAThread\+Attribute\mbox{]} int main(array$<$\+String\texorpdfstring{$^\wedge$}{\string^}$>$\texorpdfstring{$^\wedge$}{\string^} args) \{ Application\+::\+Enable\+Visual\+Styles(); Application\+::\+Set\+Compatible\+Text\+Rendering\+Default(false); Your\+Project\+Name\+::\+My\+Form form; Application\+::\+Run(\% form); \}
+
+Then, the program was compiled and run successfully.
+
+8) The project\textquotesingle{}s user interface is designed using the Windows Form we just created in the previous step.
+
+9) In the Configuration Manager, make sure "{}\+Debug"{} and "{}x64"{} are selected. The project runs smoothly with the "{}\+Local Windows Debugger."{}
+
+\DoxyHorRuler{0}
+
+
+Running with Powershell(cmd) \+:
+
+1) After running the project in Visual Studio, you will find the .exe file in the $<$\+Project Folder$>$\textbackslash{}bin\textbackslash{}\+Debug directory.
+
+2) Open Power\+Shell and navigate to the project folder. Then, run the project by typing .\textbackslash{}\+Application\+Name.exe. 

@@ -1,0 +1,78 @@
+\doxysection{Security\+Device Class Reference}
+\hypertarget{class_security_device}{}\label{class_security_device}\index{SecurityDevice@{SecurityDevice}}
+
+
+Base class for all security devices.  
+
+
+
+
+{\ttfamily \#include $<$Security\+Device.\+h$>$}
+
+Inheritance diagram for Security\+Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_security_device}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_security_alarm}{Security\+Alarm}} \mbox{\hyperlink{class_security_device_a37802f094e35f558293b6592bd218209}{alarm}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_device_a37bc1fcd4f0433cc899bbc835e298704}{device\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}}
+\begin{DoxyCompactList}\small\item\em The active status of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_a64ba12dcc5f4267486c5d545d04dcf68}{Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes the device as inactive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_device_a2f308f1fe5e1e32b37333887eba268a4}{Device}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device}{Device} object with a specified name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_device_a6fef4f7180512c7517c9696cd95e503a}{\texorpdfstring{$\sim$}{\string~}\+Device}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup in derived classes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a}{open}} ()
+\begin{DoxyCompactList}\small\item\em Opens the device, setting it as active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1efd8ba466deb39035ee8d4d97a996d3}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes the device, setting it as inactive. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_device_a81a6b84413e41787ac5295a0b3647724}{display}} () const =0
+\begin{DoxyCompactList}\small\item\em Displays the device information. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_device_a1f3676c3dad0ab90bfb4ae33b61e7c2d}{get\+Energy\+Consumption}} () const =0
+\begin{DoxyCompactList}\small\item\em Retrieves the energy consumption of the device. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_device_a053c15332a49b1c890631fb4a24525fa}{thread\+Level}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieves the thread level of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_device_a16847918d8607c8fec47ab72cc8500ff}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a203476ff55d58d4ac147072936f4eaeb}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the device is currently active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1973abf46f0e550e9843d55b7ca9b231}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ad013386d9389cbabaf245cbc651b17b3}{set\+Active}} (bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}})
+\begin{DoxyCompactList}\small\item\em Sets the active status of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a692408a9df0fc88df4eb869db4476002}{operator==}} (\mbox{\hyperlink{class_device}{Device}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two \doxylink{class_device}{Device} objects by their name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all security devices. 
+
+This class represents a generic security device that can detect risks in a room, display information, and return energy consumption and thread level. It is designed to be subclassed and extended with specific detection logic. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_security_device_a37802f094e35f558293b6592bd218209}\index{SecurityDevice@{SecurityDevice}!alarm@{alarm}}
+\index{alarm@{alarm}!SecurityDevice@{SecurityDevice}}
+\doxysubsubsection{\texorpdfstring{alarm}{alarm}}
+{\footnotesize\ttfamily \label{class_security_device_a37802f094e35f558293b6592bd218209} 
+\mbox{\hyperlink{class_security_alarm}{Security\+Alarm}} Security\+Device\+::alarm\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_security_device_8h}{Security\+Device.\+h}}\end{DoxyCompactItemize}

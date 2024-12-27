@@ -1,0 +1,41 @@
+\doxysection{Has\+Mode.\+h}
+\hypertarget{_has_mode_8h_source}{}\label{_has_mode_8h_source}\mbox{\hyperlink{_has_mode_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HASMODE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HASMODE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_device_8h}{Device.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_has_mode}{HasMode}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_device}{Device}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ \mbox{\hyperlink{class_has_mode_adec03ee7a1f2cb05b90a4e8557dc8459}{operationType}};\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_has_mode_a14c72f923afaa0ffa6202db1742fbd8b}{deviceTimer}};\ }
+\DoxyCodeLine{00019\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{class_has_mode_aefbcd9f129aa5588e3ae89533b9f5b08}{modes}};\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_has_mode_afa7810fd399c424c8bad4a538f173fdc}{working}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_has_mode_a039f3e1180a54709fbab5da9aecff340}{HasMode}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_has_mode_af346155b61989061fd6bf776cadd32dd}{setMode}}(std::string\ mode)\ =\ 0;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_has_mode_aeb84eb09fb9dac660e63f47ae07d2e9e}{getMode}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_has_mode_ad987c247c91a305449054278b06ff410}{setWorking}}(\textcolor{keywordtype}{bool}\ running);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_has_mode_a1d47ccaca43ada751614822b0f21defe}{isWorking}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_has_mode_af705f255a0c51d36909478d52ddf6a7e}{reset}}()\ =\ 0;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_has_mode_a0d73e85bf108707748ac7e707a16c6e9}{setTimer}}(\textcolor{keywordtype}{int}\ timer);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_has_mode_a51ec2ab1c2984e06c5fad2683a6bd2ae}{getTimer}}();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_has_mode_acb395c983ef36d12b181dcfd2f0edfc3}{stopTimer}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{class_has_mode_abcd509b7df6fa63304fcd363c18c21d0}{getModes}}();}
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

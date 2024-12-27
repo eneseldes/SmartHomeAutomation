@@ -1,0 +1,32 @@
+\doxysection{TV.\+h}
+\hypertarget{_t_v_8h_source}{}\label{_t_v_8h_source}\mbox{\hyperlink{_t_v_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TV\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TV\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_settable_device_8h}{SettableDevice.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_t_v}{TV}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_settable_device}{SettableDevice}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_t_v_a77591039389cbb77b9dbbf5062f15cb1}{currentChannel}};\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_t_v_a02a3fb40f0a254fef0b4aacb6362b563}{TV}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_t_v_a241dff804584739ed7e10c1ebe6bbbcf}{changeChannel}}(\textcolor{keywordtype}{bool}\ up);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_t_v_aaf84754565218ee5eea1d894d31b6f7c}{getCurrentChannel}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_t_v_ab315c536a064a2c11bc327dd60d65f0f}{setChannelTo}}(\textcolor{keywordtype}{int}\ channel);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_t_v_ae94454349917f96c58a8f0b678bc2722}{display}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_t_v_a67456428e46c6927a3440e9339ea5bc7}{getEnergyConsumption}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_t_v_ae5e79ae83c9233c8031f796de94d049e}{threadLevel}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

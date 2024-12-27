@@ -1,0 +1,49 @@
+\doxysection{User.\+h}
+\hypertarget{_user_8h_source}{}\label{_user_8h_source}\mbox{\hyperlink{_user_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ USER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ USER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_room_8h}{Room.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_home_8h}{Home.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_user}{User}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ \mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}};\ }
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}};\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_user_a4db95f173a2e350867480e2239c816a8}{loggedIn}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_room}{Room}}*\ \mbox{\hyperlink{class_user_a1af1fa87e5a23ec2f5bbdc1d34e3fea2}{currentRoom}};\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_user_a6abffd447fa391c05bbf615530267d34}{User}}(\textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}},\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_user_abd0acf1cac003d7de8dc47160e344c9a}{login}}(\mbox{\hyperlink{class_home}{Home}}\ home,\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}},\ std::string\ \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_user_a8fa2727f0e5b08b35f535fd02e2a7c62}{logout}}(\mbox{\hyperlink{class_home}{Home}}\ home);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_user_aaca9b079ec4b72367e2b2a6084968286}{visitRoom}}(\mbox{\hyperlink{class_room}{Room}}\ *room);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ std::string\ \mbox{\hyperlink{class_user_aa046b1ada1d07e4b1d77c7f89fc082f0}{getNickname}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ std::string\ \mbox{\hyperlink{class_user_aad2f2d9649b5b0aaf451423abf93c63b}{getPassword}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_user_a190f4e1e30160712a26b36a65f914243}{isLoggedIn}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_room}{Room}}\ *\mbox{\hyperlink{class_user_af3148660c9c0275a4ee6ce03687d0624}{getCurrentRoom}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_user_aea732a4dfd5e84578e7b717e9028fdc7}{setNickname}}(\textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}});}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_user_a186d574de4e737b3a7c1c1e9eec93b33}{setPassword}}(std::string\ \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}});}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_user_ad382ad3042909711d9d2656f9b839368}{setLoggedIn}}(\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_user_a4db95f173a2e350867480e2239c816a8}{loggedIn}});}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_user_a06cc3c812a5c4a23ce20b36793ea6b30}{setCurrentRoom}}(\mbox{\hyperlink{class_room}{Room}}\ *room);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_user_afe2d5cd8f5567a5e04d23780857e7e57}{operator==}}(\mbox{\hyperlink{class_user}{User}}\ \&other);}
+\DoxyCodeLine{00118\ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ USER\_H}}
+
+\end{DoxyCode}

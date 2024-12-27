@@ -1,0 +1,243 @@
+\doxysection{TV Class Reference}
+\hypertarget{class_t_v}{}\label{class_t_v}\index{TV@{TV}}
+
+
+Represents a \doxylink{class_t_v}{TV} device in the home management system.  
+
+
+
+
+{\ttfamily \#include $<$TV.\+h$>$}
+
+Inheritance diagram for TV\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_t_v}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_v_a02a3fb40f0a254fef0b4aacb6362b563}{TV}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_t_v}{TV} object with default settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_v_a241dff804584739ed7e10c1ebe6bbbcf}{change\+Channel}} (bool up)
+\begin{DoxyCompactList}\small\item\em Changes the current channel up or down. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_v_aaf84754565218ee5eea1d894d31b6f7c}{get\+Current\+Channel}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current channel being viewed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_v_ab315c536a064a2c11bc327dd60d65f0f}{set\+Channel\+To}} (int channel)
+\begin{DoxyCompactList}\small\item\em Sets the \doxylink{class_t_v}{TV} to a specific channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_v_ae94454349917f96c58a8f0b678bc2722}{display}} () const override
+\begin{DoxyCompactList}\small\item\em Displays the \doxylink{class_t_v}{TV}\textquotesingle{}s current state and settings. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_t_v_a67456428e46c6927a3440e9339ea5bc7}{get\+Energy\+Consumption}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the \doxylink{class_t_v}{TV}\textquotesingle{}s energy consumption. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_t_v_ae5e79ae83c9233c8031f796de94d049e}{thread\+Level}} () override
+\begin{DoxyCompactList}\small\item\em Calculates the thread level for the \doxylink{class_t_v}{TV} device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_settable_device}{Settable\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_settable_device_a54b3e852da55272f070a2d7ee8da2ac2}{Settable\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_settable_device}{Settable\+Device}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settable_device_ac05d519f05dab32a14f8410311d99f78}{set\+Attribute}} (int attr)
+\begin{DoxyCompactList}\small\item\em Sets the value of the device\textquotesingle{}s attribute. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_settable_device_a038b6847b7467cc50c3d8ff593a74c3e}{get\+Attribute}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current value of the device\textquotesingle{}s attribute. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_settable_device_ab37e23623aa98be56ff7cab06b47c59a}{get\+Lower\+Bound}} ()
+\begin{DoxyCompactList}\small\item\em Gets the lower bound of the attribute. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_settable_device_a618094aaa0cad060497900fa0f7001a5}{get\+Upper\+Bound}} ()
+\begin{DoxyCompactList}\small\item\em Gets the upper bound of the attribute. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_settable_device_a29dac4b1f347dd8e0478a323b27aa8c6}{get\+Attribute\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_a64ba12dcc5f4267486c5d545d04dcf68}{Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes the device as inactive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_device_a2f308f1fe5e1e32b37333887eba268a4}{Device}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device}{Device} object with a specified name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_device_a6fef4f7180512c7517c9696cd95e503a}{\texorpdfstring{$\sim$}{\string~}\+Device}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup in derived classes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a}{open}} ()
+\begin{DoxyCompactList}\small\item\em Opens the device, setting it as active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1efd8ba466deb39035ee8d4d97a996d3}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes the device, setting it as inactive. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_device_a16847918d8607c8fec47ab72cc8500ff}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a203476ff55d58d4ac147072936f4eaeb}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the device is currently active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1973abf46f0e550e9843d55b7ca9b231}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ad013386d9389cbabaf245cbc651b17b3}{set\+Active}} (bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}})
+\begin{DoxyCompactList}\small\item\em Sets the active status of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a692408a9df0fc88df4eb869db4476002}{operator==}} (\mbox{\hyperlink{class_device}{Device}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two \doxylink{class_device}{Device} objects by their name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_v_a77591039389cbb77b9dbbf5062f15cb1}{current\+Channel}}
+\begin{DoxyCompactList}\small\item\em The current channel being viewed on the \doxylink{class_t_v}{TV}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_settable_device}{Settable\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_settable_device_a5213b25cc0e342b947c07b5157c4343c}{attribute}}
+\begin{DoxyCompactList}\small\item\em The attribute value of the device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_settable_device_aa86a12fb663189c7330b0e6456e91b67}{lower\+Bound}}
+\begin{DoxyCompactList}\small\item\em The lower bound for the attribute value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_settable_device_a7b6a430622c92fcedbad9a7692e5f57f}{upper\+Bound}}
+\begin{DoxyCompactList}\small\item\em The upper bound for the attribute value. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_settable_device_a34adea0786fa7f04ccbdf82528555902}{attribute\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_device_a37bc1fcd4f0433cc899bbc835e298704}{device\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}}
+\begin{DoxyCompactList}\small\item\em The active status of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \doxylink{class_t_v}{TV} device in the home management system. 
+
+The \doxylink{class_t_v}{TV} class provides functionalities for changing channels, retrieving the current channel, and other device-\/specific operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_t_v_a02a3fb40f0a254fef0b4aacb6362b563}\index{TV@{TV}!TV@{TV}}
+\index{TV@{TV}!TV@{TV}}
+\doxysubsubsection{\texorpdfstring{TV()}{TV()}}
+{\footnotesize\ttfamily \label{class_t_v_a02a3fb40f0a254fef0b4aacb6362b563} 
+TV\+::\+TV (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_t_v}{TV} object with default settings. 
+
+Default constructor for the \doxylink{class_t_v}{TV} class.
+
+Initializes the \doxylink{class_t_v}{TV} with a default channel of 15, a default voice level, and assigns other relevant properties. \texorpdfstring{$<$}{<} Default voice level.
+
+\texorpdfstring{$<$}{<} Minimum voice level.
+
+\texorpdfstring{$<$}{<} Maximum voice level.
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_t_v_a241dff804584739ed7e10c1ebe6bbbcf}\index{TV@{TV}!changeChannel@{changeChannel}}
+\index{changeChannel@{changeChannel}!TV@{TV}}
+\doxysubsubsection{\texorpdfstring{changeChannel()}{changeChannel()}}
+{\footnotesize\ttfamily \label{class_t_v_a241dff804584739ed7e10c1ebe6bbbcf} 
+void TV\+::change\+Channel (\begin{DoxyParamCaption}\item[{bool}]{up}{}\end{DoxyParamCaption})}
+
+
+
+Changes the current channel up or down. 
+
+Changes the \doxylink{class_t_v}{TV} channel up or down.
+
+
+\begin{DoxyParams}{Parameters}
+{\em up} & True to move to the next channel, false to move to the previous channel.\\
+\hline
+{\em up} & If true, increments the channel number; otherwise, decrements it. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_v_ae94454349917f96c58a8f0b678bc2722}\index{TV@{TV}!display@{display}}
+\index{display@{display}!TV@{TV}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{class_t_v_ae94454349917f96c58a8f0b678bc2722} 
+void TV\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays the \doxylink{class_t_v}{TV}\textquotesingle{}s current state and settings. 
+
+Displays the \doxylink{class_t_v}{TV}\textquotesingle{}s current settings and status. 
+
+Implements \mbox{\hyperlink{class_device_a81a6b84413e41787ac5295a0b3647724}{Device}}.
+
+\Hypertarget{class_t_v_aaf84754565218ee5eea1d894d31b6f7c}\index{TV@{TV}!getCurrentChannel@{getCurrentChannel}}
+\index{getCurrentChannel@{getCurrentChannel}!TV@{TV}}
+\doxysubsubsection{\texorpdfstring{getCurrentChannel()}{getCurrentChannel()}}
+{\footnotesize\ttfamily \label{class_t_v_aaf84754565218ee5eea1d894d31b6f7c} 
+int TV\+::get\+Current\+Channel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the current channel being viewed. 
+
+Gets the current channel number of the \doxylink{class_t_v}{TV}.
+
+\begin{DoxyReturn}{Returns}
+The current channel number as an integer.
+
+The current channel as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_t_v_a67456428e46c6927a3440e9339ea5bc7}\index{TV@{TV}!getEnergyConsumption@{getEnergyConsumption}}
+\index{getEnergyConsumption@{getEnergyConsumption}!TV@{TV}}
+\doxysubsubsection{\texorpdfstring{getEnergyConsumption()}{getEnergyConsumption()}}
+{\footnotesize\ttfamily \label{class_t_v_a67456428e46c6927a3440e9339ea5bc7} 
+double TV\+::get\+Energy\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the \doxylink{class_t_v}{TV}\textquotesingle{}s energy consumption. 
+
+\begin{DoxyReturn}{Returns}
+The energy consumption value as a double. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_device_a1f3676c3dad0ab90bfb4ae33b61e7c2d}{Device}}.
+
+\Hypertarget{class_t_v_ab315c536a064a2c11bc327dd60d65f0f}\index{TV@{TV}!setChannelTo@{setChannelTo}}
+\index{setChannelTo@{setChannelTo}!TV@{TV}}
+\doxysubsubsection{\texorpdfstring{setChannelTo()}{setChannelTo()}}
+{\footnotesize\ttfamily \label{class_t_v_ab315c536a064a2c11bc327dd60d65f0f} 
+void TV\+::set\+Channel\+To (\begin{DoxyParamCaption}\item[{int}]{channel}{}\end{DoxyParamCaption})}
+
+
+
+Sets the \doxylink{class_t_v}{TV} to a specific channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The channel number to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_v_ae5e79ae83c9233c8031f796de94d049e}\index{TV@{TV}!threadLevel@{threadLevel}}
+\index{threadLevel@{threadLevel}!TV@{TV}}
+\doxysubsubsection{\texorpdfstring{threadLevel()}{threadLevel()}}
+{\footnotesize\ttfamily \label{class_t_v_ae5e79ae83c9233c8031f796de94d049e} 
+double TV\+::thread\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the thread level for the \doxylink{class_t_v}{TV} device. 
+
+Calculates the thread level for the \doxylink{class_t_v}{TV}.
+
+\begin{DoxyReturn}{Returns}
+The thread level as a double. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_device_a053c15332a49b1c890631fb4a24525fa}{Device}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_t_v_a77591039389cbb77b9dbbf5062f15cb1}\index{TV@{TV}!currentChannel@{currentChannel}}
+\index{currentChannel@{currentChannel}!TV@{TV}}
+\doxysubsubsection{\texorpdfstring{currentChannel}{currentChannel}}
+{\footnotesize\ttfamily \label{class_t_v_a77591039389cbb77b9dbbf5062f15cb1} 
+int TV\+::current\+Channel\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The current channel being viewed on the \doxylink{class_t_v}{TV}. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_t_v_8h}{TV.\+h}}\item 
+\mbox{\hyperlink{_t_v_8cpp}{TV.\+cpp}}\end{DoxyCompactItemize}

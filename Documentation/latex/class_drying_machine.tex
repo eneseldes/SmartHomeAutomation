@@ -1,0 +1,259 @@
+\doxysection{Drying\+Machine Class Reference}
+\hypertarget{class_drying_machine}{}\label{class_drying_machine}\index{DryingMachine@{DryingMachine}}
+
+
+Represents a \doxylink{class_drying_machine}{Drying\+Machine} device with various drying modes and corresponding timers.  
+
+
+
+
+{\ttfamily \#include $<$Drying\+Machine.\+h$>$}
+
+Inheritance diagram for Drying\+Machine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_drying_machine}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_drying_machine_a22b2a04405715d68e066b8dadfa46ed9}{Drying\+Machine}} ()
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the \doxylink{class_drying_machine}{Drying\+Machine} with default settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drying_machine_a07d00a68b4a37931ed1a25f0c57312e4}{set\+Mode}} (std\+::string \mbox{\hyperlink{class_has_mode_adec03ee7a1f2cb05b90a4e8557dc8459}{operation\+Type}}) override
+\begin{DoxyCompactList}\small\item\em Sets the mode of the drying machine and adjusts the timer based on the selected mode. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_drying_machine_ac76d78a482f1f1e5d9e554176beb4990}{get\+Mode}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the current mode of the drying machine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drying_machine_a001d3c3f68c2c2033e28483480c025f6}{display}} () const override
+\begin{DoxyCompactList}\small\item\em Displays information about the drying machine, including its name, mode, and timer. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_drying_machine_aa7e437ab0b791ff49fbeaf9fcbf0b378}{thread\+Level}} () override
+\begin{DoxyCompactList}\small\item\em Returns the thread level of the drying machine, indicating its computational requirements. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_drying_machine_a2f2b6bf9aa631b3e9cfed2dc7edfaa06}{get\+Energy\+Consumption}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the energy consumption of the drying machine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drying_machine_a414a2134d659d9097e014a0c68c05b58}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the drying machine to its default mode and timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_has_mode}{Has\+Mode}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_has_mode_a039f3e1180a54709fbab5da9aecff340}{Has\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_has_mode}{Has\+Mode} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_has_mode_ad987c247c91a305449054278b06ff410}{set\+Working}} (bool running)
+\begin{DoxyCompactList}\small\item\em Sets the operational state of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_has_mode_a1d47ccaca43ada751614822b0f21defe}{is\+Working}} ()
+\begin{DoxyCompactList}\small\item\em Gets the operational state of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_has_mode_a0d73e85bf108707748ac7e707a16c6e9}{set\+Timer}} (int timer)
+\begin{DoxyCompactList}\small\item\em Sets the timer for the device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_has_mode_a51ec2ab1c2984e06c5fad2683a6bd2ae}{get\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current timer value for the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_has_mode_acb395c983ef36d12b181dcfd2f0edfc3}{stop\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Stops the timer for the device. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_has_mode_abcd509b7df6fa63304fcd363c18c21d0}{get\+Modes}} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of available operation modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_a64ba12dcc5f4267486c5d545d04dcf68}{Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes the device as inactive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_device_a2f308f1fe5e1e32b37333887eba268a4}{Device}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device}{Device} object with a specified name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_device_a6fef4f7180512c7517c9696cd95e503a}{\texorpdfstring{$\sim$}{\string~}\+Device}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup in derived classes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a}{open}} ()
+\begin{DoxyCompactList}\small\item\em Opens the device, setting it as active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1efd8ba466deb39035ee8d4d97a996d3}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes the device, setting it as inactive. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_device_a16847918d8607c8fec47ab72cc8500ff}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a203476ff55d58d4ac147072936f4eaeb}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the device is currently active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1973abf46f0e550e9843d55b7ca9b231}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ad013386d9389cbabaf245cbc651b17b3}{set\+Active}} (bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}})
+\begin{DoxyCompactList}\small\item\em Sets the active status of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a692408a9df0fc88df4eb869db4476002}{operator==}} (\mbox{\hyperlink{class_device}{Device}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two \doxylink{class_device}{Device} objects by their name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_has_mode}{Has\+Mode}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_has_mode_adec03ee7a1f2cb05b90a4e8557dc8459}{operation\+Type}}
+\item 
+int \mbox{\hyperlink{class_has_mode_a14c72f923afaa0ffa6202db1742fbd8b}{device\+Timer}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_has_mode_aefbcd9f129aa5588e3ae89533b9f5b08}{modes}}
+\item 
+bool \mbox{\hyperlink{class_has_mode_afa7810fd399c424c8bad4a538f173fdc}{working}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_device_a37bc1fcd4f0433cc899bbc835e298704}{device\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}}
+\begin{DoxyCompactList}\small\item\em The active status of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \doxylink{class_drying_machine}{Drying\+Machine} device with various drying modes and corresponding timers. 
+
+Represents a drying machine that can operate in different modes.
+
+The \doxylink{class_drying_machine}{Drying\+Machine} class inherits from \doxylink{class_has_mode}{Has\+Mode} and allows the user to select different drying modes such as "{}\+Normal"{}, "{}\+Delicate"{}, "{}\+Baby"{}, "{}\+Quick"{}, "{}\+Synthetic"{}, and "{}\+Anti\+Wrinkle"{}. Each mode has a corresponding timer setting. The class provides methods to display information, set modes, and calculate energy consumption.
+
+The \doxylink{class_drying_machine}{Drying\+Machine} class inherits from \doxylink{class_has_mode}{Has\+Mode} and provides functionality to set various drying modes. Each mode has a predefined time and affects the energy consumption and thread level of the machine. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_drying_machine_a22b2a04405715d68e066b8dadfa46ed9}\index{DryingMachine@{DryingMachine}!DryingMachine@{DryingMachine}}
+\index{DryingMachine@{DryingMachine}!DryingMachine@{DryingMachine}}
+\doxysubsubsection{\texorpdfstring{DryingMachine()}{DryingMachine()}}
+{\footnotesize\ttfamily \label{class_drying_machine_a22b2a04405715d68e066b8dadfa46ed9} 
+Drying\+Machine\+::\+Drying\+Machine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize the \doxylink{class_drying_machine}{Drying\+Machine} with default settings. 
+
+The constructor sets the available modes for the drying machine and initializes its default mode. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_drying_machine_a001d3c3f68c2c2033e28483480c025f6}\index{DryingMachine@{DryingMachine}!display@{display}}
+\index{display@{display}!DryingMachine@{DryingMachine}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{class_drying_machine_a001d3c3f68c2c2033e28483480c025f6} 
+void Drying\+Machine\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays information about the drying machine, including its name, mode, and timer. 
+
+
+
+Implements \mbox{\hyperlink{class_device_a81a6b84413e41787ac5295a0b3647724}{Device}}.
+
+\Hypertarget{class_drying_machine_a2f2b6bf9aa631b3e9cfed2dc7edfaa06}\index{DryingMachine@{DryingMachine}!getEnergyConsumption@{getEnergyConsumption}}
+\index{getEnergyConsumption@{getEnergyConsumption}!DryingMachine@{DryingMachine}}
+\doxysubsubsection{\texorpdfstring{getEnergyConsumption()}{getEnergyConsumption()}}
+{\footnotesize\ttfamily \label{class_drying_machine_a2f2b6bf9aa631b3e9cfed2dc7edfaa06} 
+double Drying\+Machine\+::get\+Energy\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the energy consumption of the drying machine. 
+
+\begin{DoxyReturn}{Returns}
+The energy consumption value (in watts).
+
+The energy consumption value in watts. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_device_a1f3676c3dad0ab90bfb4ae33b61e7c2d}{Device}}.
+
+\Hypertarget{class_drying_machine_ac76d78a482f1f1e5d9e554176beb4990}\index{DryingMachine@{DryingMachine}!getMode@{getMode}}
+\index{getMode@{getMode}!DryingMachine@{DryingMachine}}
+\doxysubsubsection{\texorpdfstring{getMode()}{getMode()}}
+{\footnotesize\ttfamily \label{class_drying_machine_ac76d78a482f1f1e5d9e554176beb4990} 
+std\+::string Drying\+Machine\+::get\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the current mode of the drying machine. 
+
+Retrieves the current mode of the drying machine.
+
+\begin{DoxyReturn}{Returns}
+The current mode of the drying machine.
+
+The current mode of the drying machine as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_has_mode_aeb84eb09fb9dac660e63f47ae07d2e9e}{Has\+Mode}}.
+
+\Hypertarget{class_drying_machine_a414a2134d659d9097e014a0c68c05b58}\index{DryingMachine@{DryingMachine}!reset@{reset}}
+\index{reset@{reset}!DryingMachine@{DryingMachine}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \label{class_drying_machine_a414a2134d659d9097e014a0c68c05b58} 
+void Drying\+Machine\+::reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resets the drying machine to its default mode and timer. 
+
+Resets the drying machine\textquotesingle{}s mode and timer to their default values. 
+
+Implements \mbox{\hyperlink{class_has_mode_af705f255a0c51d36909478d52ddf6a7e}{Has\+Mode}}.
+
+\Hypertarget{class_drying_machine_a07d00a68b4a37931ed1a25f0c57312e4}\index{DryingMachine@{DryingMachine}!setMode@{setMode}}
+\index{setMode@{setMode}!DryingMachine@{DryingMachine}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily \label{class_drying_machine_a07d00a68b4a37931ed1a25f0c57312e4} 
+void Drying\+Machine\+::set\+Mode (\begin{DoxyParamCaption}\item[{std\+::string}]{operation\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the mode of the drying machine and adjusts the timer based on the selected mode. 
+
+Sets the mode of the drying machine and adjusts the timer.
+
+Available modes\+:
+\begin{DoxyItemize}
+\item "{}\+Normal"{}\+: 120 minutes
+\item "{}\+Delicate"{}\+: 70 minutes
+\item "{}\+Baby"{}\+: 80 minutes
+\item "{}\+Quick"{}\+: 60 minutes
+\item "{}\+Synthetic"{}\+: 100 minutes
+\item "{}\+Anti\+Wrinkle"{}\+: 160 minutes
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+Type} & The mode to be set for the drying machine.\\
+\hline
+\end{DoxyParams}
+Valid modes include\+:
+\begin{DoxyItemize}
+\item Normal\+: 120 minutes
+\item Delicate\+: 70 minutes
+\item Baby\+: 80 minutes
+\item Quick\+: 60 minutes
+\item Synthetic\+: 100 minutes
+\item Anti\+Wrinkle\+: 160 minutes If an invalid mode is provided, an error message is shown.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+Type} & The desired mode to set (e.\+g., "{}\+Normal"{}, "{}\+Delicate"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_has_mode_af346155b61989061fd6bf776cadd32dd}{Has\+Mode}}.
+
+\Hypertarget{class_drying_machine_aa7e437ab0b791ff49fbeaf9fcbf0b378}\index{DryingMachine@{DryingMachine}!threadLevel@{threadLevel}}
+\index{threadLevel@{threadLevel}!DryingMachine@{DryingMachine}}
+\doxysubsubsection{\texorpdfstring{threadLevel()}{threadLevel()}}
+{\footnotesize\ttfamily \label{class_drying_machine_aa7e437ab0b791ff49fbeaf9fcbf0b378} 
+double Drying\+Machine\+::thread\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the thread level of the drying machine, indicating its computational requirements. 
+
+Returns the thread level of the drying machine.
+
+\begin{DoxyReturn}{Returns}
+The thread level as a double.
+
+The thread level, which represents the processing power required by the device. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_device_a053c15332a49b1c890631fb4a24525fa}{Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_drying_machine_8h}{Drying\+Machine.\+h}}\item 
+\mbox{\hyperlink{_drying_machine_8cpp}{Drying\+Machine.\+cpp}}\end{DoxyCompactItemize}

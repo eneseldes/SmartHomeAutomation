@@ -1,0 +1,321 @@
+\doxysection{Has\+Mode Class Reference}
+\hypertarget{class_has_mode}{}\label{class_has_mode}\index{HasMode@{HasMode}}
+
+
+A class that manages mode settings and device timers for devices that have modes.  
+
+
+
+
+{\ttfamily \#include $<$Has\+Mode.\+h$>$}
+
+Inheritance diagram for Has\+Mode\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_has_mode}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_has_mode_a039f3e1180a54709fbab5da9aecff340}{Has\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_has_mode}{Has\+Mode} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_has_mode_af346155b61989061fd6bf776cadd32dd}{set\+Mode}} (std\+::string mode)=0
+\begin{DoxyCompactList}\small\item\em Sets the operation mode of the device. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_has_mode_aeb84eb09fb9dac660e63f47ae07d2e9e}{get\+Mode}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the current operation mode of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_has_mode_ad987c247c91a305449054278b06ff410}{set\+Working}} (bool running)
+\begin{DoxyCompactList}\small\item\em Sets the operational state of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_has_mode_a1d47ccaca43ada751614822b0f21defe}{is\+Working}} ()
+\begin{DoxyCompactList}\small\item\em Gets the operational state of the device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_has_mode_af705f255a0c51d36909478d52ddf6a7e}{reset}} ()=0
+\begin{DoxyCompactList}\small\item\em Resets the device\textquotesingle{}s settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_has_mode_a0d73e85bf108707748ac7e707a16c6e9}{set\+Timer}} (int timer)
+\begin{DoxyCompactList}\small\item\em Sets the timer for the device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_has_mode_a51ec2ab1c2984e06c5fad2683a6bd2ae}{get\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current timer value for the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_has_mode_acb395c983ef36d12b181dcfd2f0edfc3}{stop\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Stops the timer for the device. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_has_mode_abcd509b7df6fa63304fcd363c18c21d0}{get\+Modes}} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of available operation modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_a64ba12dcc5f4267486c5d545d04dcf68}{Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes the device as inactive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_device_a2f308f1fe5e1e32b37333887eba268a4}{Device}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device}{Device} object with a specified name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_device_a6fef4f7180512c7517c9696cd95e503a}{\texorpdfstring{$\sim$}{\string~}\+Device}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup in derived classes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a}{open}} ()
+\begin{DoxyCompactList}\small\item\em Opens the device, setting it as active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1efd8ba466deb39035ee8d4d97a996d3}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes the device, setting it as inactive. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_device_a81a6b84413e41787ac5295a0b3647724}{display}} () const =0
+\begin{DoxyCompactList}\small\item\em Displays the device information. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_device_a1f3676c3dad0ab90bfb4ae33b61e7c2d}{get\+Energy\+Consumption}} () const =0
+\begin{DoxyCompactList}\small\item\em Retrieves the energy consumption of the device. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_device_a053c15332a49b1c890631fb4a24525fa}{thread\+Level}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieves the thread level of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_device_a16847918d8607c8fec47ab72cc8500ff}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a203476ff55d58d4ac147072936f4eaeb}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the device is currently active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1973abf46f0e550e9843d55b7ca9b231}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ad013386d9389cbabaf245cbc651b17b3}{set\+Active}} (bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}})
+\begin{DoxyCompactList}\small\item\em Sets the active status of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a692408a9df0fc88df4eb869db4476002}{operator==}} (\mbox{\hyperlink{class_device}{Device}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two \doxylink{class_device}{Device} objects by their name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_has_mode_adec03ee7a1f2cb05b90a4e8557dc8459}{operation\+Type}}
+\item 
+int \mbox{\hyperlink{class_has_mode_a14c72f923afaa0ffa6202db1742fbd8b}{device\+Timer}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_has_mode_aefbcd9f129aa5588e3ae89533b9f5b08}{modes}}
+\item 
+bool \mbox{\hyperlink{class_has_mode_afa7810fd399c424c8bad4a538f173fdc}{working}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_device_a37bc1fcd4f0433cc899bbc835e298704}{device\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}}
+\begin{DoxyCompactList}\small\item\em The active status of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that manages mode settings and device timers for devices that have modes. 
+
+A class that manages devices with multiple operation modes and timers.
+
+The \doxylink{class_has_mode}{Has\+Mode} class provides functionality to set and get operation modes, manage device timers, and track the device\textquotesingle{}s operational state.
+
+This class extends the \doxylink{class_device}{Device} class and is used for devices that support multiple modes of operation. It allows setting and getting operation modes, controlling device timers, and tracking the device\textquotesingle{}s operational state. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_has_mode_a039f3e1180a54709fbab5da9aecff340}\index{HasMode@{HasMode}!HasMode@{HasMode}}
+\index{HasMode@{HasMode}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{HasMode()}{HasMode()}}
+{\footnotesize\ttfamily \label{class_has_mode_a039f3e1180a54709fbab5da9aecff340} 
+Has\+Mode\+::\+Has\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{class_has_mode}{Has\+Mode} class. 
+
+Initializes the operation mode to "{}\+Normal"{} and the timer to 0. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_has_mode_aeb84eb09fb9dac660e63f47ae07d2e9e}\index{HasMode@{HasMode}!getMode@{getMode}}
+\index{getMode@{getMode}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{getMode()}{getMode()}}
+{\footnotesize\ttfamily \label{class_has_mode_aeb84eb09fb9dac660e63f47ae07d2e9e} 
+std\+::string Has\+Mode\+::get\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the current operation mode of the device. 
+
+This method is pure virtual, and derived classes must implement it to return the current operation mode.
+
+\begin{DoxyReturn}{Returns}
+The current operation mode of the device.
+
+The current operation mode (e.\+g., "{}\+Normal"{}). 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dishwasher_ad9cd46a698e537abd38c054d3075a1f0}{Dishwasher}}, \mbox{\hyperlink{class_drying_machine_ac76d78a482f1f1e5d9e554176beb4990}{Drying\+Machine}}, and \mbox{\hyperlink{class_oven_abd4a50da5f3dd9e3f4c67eaf34fcc34a}{Oven}}.
+
+\Hypertarget{class_has_mode_abcd509b7df6fa63304fcd363c18c21d0}\index{HasMode@{HasMode}!getModes@{getModes}}
+\index{getModes@{getModes}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{getModes()}{getModes()}}
+{\footnotesize\ttfamily \label{class_has_mode_abcd509b7df6fa63304fcd363c18c21d0} 
+std\+::vector$<$ std\+::string $>$ Has\+Mode\+::get\+Modes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the list of available operation modes. 
+
+Gets the available modes for the device.
+
+\begin{DoxyReturn}{Returns}
+A vector of strings representing the available operation modes.
+
+A vector of available modes (e.\+g., "{}\+Normal"{}, "{}\+Eco"{}, etc.). 
+\end{DoxyReturn}
+\Hypertarget{class_has_mode_a51ec2ab1c2984e06c5fad2683a6bd2ae}\index{HasMode@{HasMode}!getTimer@{getTimer}}
+\index{getTimer@{getTimer}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{getTimer()}{getTimer()}}
+{\footnotesize\ttfamily \label{class_has_mode_a51ec2ab1c2984e06c5fad2683a6bd2ae} 
+int Has\+Mode\+::get\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current timer value for the device. 
+
+\begin{DoxyReturn}{Returns}
+The current timer value, in minutes.
+
+The timer value in minutes. 
+\end{DoxyReturn}
+\Hypertarget{class_has_mode_a1d47ccaca43ada751614822b0f21defe}\index{HasMode@{HasMode}!isWorking@{isWorking}}
+\index{isWorking@{isWorking}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{isWorking()}{isWorking()}}
+{\footnotesize\ttfamily \label{class_has_mode_a1d47ccaca43ada751614822b0f21defe} 
+bool Has\+Mode\+::is\+Working (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the operational state of the device. 
+
+\begin{DoxyReturn}{Returns}
+True if the device is operating, false otherwise.
+
+True if the device is working, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_has_mode_af705f255a0c51d36909478d52ddf6a7e}\index{HasMode@{HasMode}!reset@{reset}}
+\index{reset@{reset}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \label{class_has_mode_af705f255a0c51d36909478d52ddf6a7e} 
+void Has\+Mode\+::reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Resets the device\textquotesingle{}s settings. 
+
+Resets the device settings.
+
+This method is pure virtual, and derived classes must implement it to reset the operation mode and timer.
+
+This method resets the operation mode to "{}\+Standby"{} and stops the timer. \texorpdfstring{$<$}{<} Reset operation mode to "{}\+Standby"{}
+
+\texorpdfstring{$<$}{<} Reset the timer
+
+Implemented in \mbox{\hyperlink{class_dishwasher_aafc33460ae9063edbf024daebe7486cc}{Dishwasher}}, \mbox{\hyperlink{class_drying_machine_a414a2134d659d9097e014a0c68c05b58}{Drying\+Machine}}, and \mbox{\hyperlink{class_oven_a0f698ab9f83f3b334d859c7a136b566e}{Oven}}.
+
+\Hypertarget{class_has_mode_af346155b61989061fd6bf776cadd32dd}\index{HasMode@{HasMode}!setMode@{setMode}}
+\index{setMode@{setMode}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily \label{class_has_mode_af346155b61989061fd6bf776cadd32dd} 
+void Has\+Mode\+::set\+Mode (\begin{DoxyParamCaption}\item[{std\+::string}]{opr\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the operation mode of the device. 
+
+This method is pure virtual, and derived classes must implement it to set the operation mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The operation mode to set (e.\+g., "{}\+Normal"{}, "{}\+Eco"{}).\\
+\hline
+\end{DoxyParams}
+This method updates the current operation mode of the device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em opr\+Type} & The mode to set (e.\+g., "{}\+Normal"{}, "{}\+Eco"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_dishwasher_abb369ae2e10a1ab94565b11c92d6d4ae}{Dishwasher}}, \mbox{\hyperlink{class_drying_machine_a07d00a68b4a37931ed1a25f0c57312e4}{Drying\+Machine}}, and \mbox{\hyperlink{class_oven_abed63b85aa8785e1ad6705c45388d64a}{Oven}}.
+
+\Hypertarget{class_has_mode_a0d73e85bf108707748ac7e707a16c6e9}\index{HasMode@{HasMode}!setTimer@{setTimer}}
+\index{setTimer@{setTimer}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{setTimer()}{setTimer()}}
+{\footnotesize\ttfamily \label{class_has_mode_a0d73e85bf108707748ac7e707a16c6e9} 
+void Has\+Mode\+::set\+Timer (\begin{DoxyParamCaption}\item[{int}]{timer}{}\end{DoxyParamCaption})}
+
+
+
+Sets the timer for the device. 
+
+Sets the timer value for the device.
+
+This method sets the timer to a specified value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & The timer value to set, in minutes.\\
+\hline
+\end{DoxyParams}
+This method sets the duration for which the device should operate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & The time in minutes. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_has_mode_ad987c247c91a305449054278b06ff410}\index{HasMode@{HasMode}!setWorking@{setWorking}}
+\index{setWorking@{setWorking}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{setWorking()}{setWorking()}}
+{\footnotesize\ttfamily \label{class_has_mode_ad987c247c91a305449054278b06ff410} 
+void Has\+Mode\+::set\+Working (\begin{DoxyParamCaption}\item[{bool}]{working}{}\end{DoxyParamCaption})}
+
+
+
+Sets the operational state of the device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em running} & True if the device is operating, false otherwise.\\
+\hline
+\end{DoxyParams}
+This method updates whether the device is currently operational or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em working} & True if the device is working, false otherwise. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_has_mode_acb395c983ef36d12b181dcfd2f0edfc3}\index{HasMode@{HasMode}!stopTimer@{stopTimer}}
+\index{stopTimer@{stopTimer}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{stopTimer()}{stopTimer()}}
+{\footnotesize\ttfamily \label{class_has_mode_acb395c983ef36d12b181dcfd2f0edfc3} 
+void Has\+Mode\+::stop\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the timer for the device. 
+
+Resets the device\textquotesingle{}s timer to 0, stopping the countdown.
+
+This method resets the device\textquotesingle{}s timer to 0, stopping the countdown. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_has_mode_a14c72f923afaa0ffa6202db1742fbd8b}\index{HasMode@{HasMode}!deviceTimer@{deviceTimer}}
+\index{deviceTimer@{deviceTimer}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{deviceTimer}{deviceTimer}}
+{\footnotesize\ttfamily \label{class_has_mode_a14c72f923afaa0ffa6202db1742fbd8b} 
+int Has\+Mode\+::device\+Timer\hspace{0.3cm}{\ttfamily [protected]}}
+
+Timer value for the device (in minutes) \Hypertarget{class_has_mode_aefbcd9f129aa5588e3ae89533b9f5b08}\index{HasMode@{HasMode}!modes@{modes}}
+\index{modes@{modes}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{modes}{modes}}
+{\footnotesize\ttfamily \label{class_has_mode_aefbcd9f129aa5588e3ae89533b9f5b08} 
+std\+::vector$<$std\+::string$>$ Has\+Mode\+::modes\hspace{0.3cm}{\ttfamily [protected]}}
+
+List of available operation modes \Hypertarget{class_has_mode_adec03ee7a1f2cb05b90a4e8557dc8459}\index{HasMode@{HasMode}!operationType@{operationType}}
+\index{operationType@{operationType}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{operationType}{operationType}}
+{\footnotesize\ttfamily \label{class_has_mode_adec03ee7a1f2cb05b90a4e8557dc8459} 
+std\+::string Has\+Mode\+::operation\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+Current operation mode of the device \Hypertarget{class_has_mode_afa7810fd399c424c8bad4a538f173fdc}\index{HasMode@{HasMode}!working@{working}}
+\index{working@{working}!HasMode@{HasMode}}
+\doxysubsubsection{\texorpdfstring{working}{working}}
+{\footnotesize\ttfamily \label{class_has_mode_afa7810fd399c424c8bad4a538f173fdc} 
+bool Has\+Mode\+::working = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+Indicates if the device is currently operating 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_has_mode_8h}{Has\+Mode.\+h}}\item 
+\mbox{\hyperlink{_has_mode_8cpp}{Has\+Mode.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,295 @@
+\doxysection{Admin Class Reference}
+\hypertarget{class_admin}{}\label{class_admin}\index{Admin@{Admin}}
+
+
+Represents an admin user who can manage users and devices in the home automation system.  
+
+
+
+
+{\ttfamily \#include $<$Admin.\+h$>$}
+
+Inheritance diagram for Admin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_admin}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_admin_a9b0aa09800cca9aca971d64032cbf4f8}{Admin}} (const std\+::string \&\mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}}, const std\+::string \&\mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_admin}{Admin} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_a3dd608cf17a49184b9f0b1da3c90c77c}{add\+User}} (\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*}home, \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*}user)
+\begin{DoxyCompactList}\small\item\em Adds a user to the home system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_aed1ee1c13d5b5f012398d49c88c5099a}{add\+User}} (\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*}home, std\+::string name, std\+::string \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Adds a user to the home system using their nickname and password. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_af5bbef0735cb16c95a38f7d8bdfa3cac}{remove\+User}} (\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*}home, \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*}user)
+\begin{DoxyCompactList}\small\item\em Removes a user from the home system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_af17035ac60854c300f69480055d6e1e5}{remove\+User}} (\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*}home, std\+::string \&\mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}})
+\begin{DoxyCompactList}\small\item\em Removes a user from the home system using their nickname. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_add7047c934e268997ec45eafc93e29c4}{add\+Device}} (\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}room, \mbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*}device)
+\begin{DoxyCompactList}\small\item\em Adds a device to a room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_aa6a6bdcec1ba6922769e102ff067ca1b}{add\+Device}} (\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*}home, std\+::string room\+Name, std\+::string device\+Name)
+\begin{DoxyCompactList}\small\item\em Adds a device to a specific room in the home using device and room names. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_abcb61a617334308255a1fb5cf1c1e6aa}{remove\+Device}} (\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}room, \mbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*}device)
+\begin{DoxyCompactList}\small\item\em Removes a device from a room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_admin_aaf6c168436b866104af146bfbe4057a2}{remove\+Device}} (\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*}home, std\+::string room\+Name, std\+::string device\+Name)
+\begin{DoxyCompactList}\small\item\em Removes a device from a specific room in the home using device and room names. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_user}{User}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_a6abffd447fa391c05bbf615530267d34}{User}} (const std\+::string \&\mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}}, const std\+::string \&\mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_user}{User} object with a specified nickname and password. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_abd0acf1cac003d7de8dc47160e344c9a}{login}} (\mbox{\hyperlink{class_home}{Home}} home, const std\+::string \&\mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}}, std\+::string \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Logs in the user by checking if the provided nickname and password match the stored credentials. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a8fa2727f0e5b08b35f535fd02e2a7c62}{logout}} (\mbox{\hyperlink{class_home}{Home}} home)
+\begin{DoxyCompactList}\small\item\em Logs out the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_aaca9b079ec4b72367e2b2a6084968286}{visit\+Room}} (\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}room)
+\begin{DoxyCompactList}\small\item\em Makes the user visit a new room. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_aa046b1ada1d07e4b1d77c7f89fc082f0}{get\+Nickname}} ()
+\begin{DoxyCompactList}\small\item\em Gets the user\textquotesingle{}s nickname. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_aad2f2d9649b5b0aaf451423abf93c63b}{get\+Password}} ()
+\begin{DoxyCompactList}\small\item\em Gets the user\textquotesingle{}s password. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_user_a190f4e1e30160712a26b36a65f914243}{is\+Logged\+In}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the user is logged in. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_user_af3148660c9c0275a4ee6ce03687d0624}{get\+Current\+Room}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current room the user is in. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_aea732a4dfd5e84578e7b717e9028fdc7}{set\+Nickname}} (const std\+::string \&\mbox{\hyperlink{class_user_aebdb6953485740c33307118f91156832}{nickname}})
+\begin{DoxyCompactList}\small\item\em Sets the user\textquotesingle{}s nickname. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a186d574de4e737b3a7c1c1e9eec93b33}{set\+Password}} (std\+::string \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Sets the user\textquotesingle{}s password. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_ad382ad3042909711d9d2656f9b839368}{set\+Logged\+In}} (bool \mbox{\hyperlink{class_user_a4db95f173a2e350867480e2239c816a8}{logged\+In}})
+\begin{DoxyCompactList}\small\item\em Sets the logged-\/in status of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a06cc3c812a5c4a23ce20b36793ea6b30}{set\+Current\+Room}} (\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}room)
+\begin{DoxyCompactList}\small\item\em Sets the current room for the user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_user_afe2d5cd8f5567a5e04d23780857e7e57}{operator==}} (\mbox{\hyperlink{class_user}{User}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two users by their nicknames. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an admin user who can manage users and devices in the home automation system. 
+
+The \doxylink{class_admin}{Admin} class extends the \doxylink{class_user}{User} class and provides additional functionalities for managing users and devices in the home automation system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_admin_a9b0aa09800cca9aca971d64032cbf4f8}\index{Admin@{Admin}!Admin@{Admin}}
+\index{Admin@{Admin}!Admin@{Admin}}
+\doxysubsubsection{\texorpdfstring{Admin()}{Admin()}}
+{\footnotesize\ttfamily \label{class_admin_a9b0aa09800cca9aca971d64032cbf4f8} 
+Admin\+::\+Admin (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nickname}{, }\item[{const std\+::string \&}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_admin}{Admin} class. 
+
+Constructor for \doxylink{class_admin}{Admin} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nickname} & The nickname of the admin. \\
+\hline
+{\em password} & The password of the admin.\\
+\hline
+{\em nickname} & Nickname of the admin. \\
+\hline
+{\em password} & Password of the admin. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_admin_aa6a6bdcec1ba6922769e102ff067ca1b}\index{Admin@{Admin}!addDevice@{addDevice}}
+\index{addDevice@{addDevice}!Admin@{Admin}}
+\doxysubsubsection{\texorpdfstring{addDevice()}{addDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_admin_aa6a6bdcec1ba6922769e102ff067ca1b} 
+void Admin\+::add\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*}}]{home}{, }\item[{std\+::string}]{room\+Name}{, }\item[{std\+::string}]{device\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Adds a device to a specific room in the home using device and room names. 
+
+Adds a device to a specific room in the home by name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em home} & Pointer to the \doxylink{class_home}{Home} object where the room is located. \\
+\hline
+{\em room\+Name} & The name of the room where the device will be added. \\
+\hline
+{\em device\+Name} & The name of the device to be added.\\
+\hline
+{\em home} & Pointer to the \doxylink{class_home}{Home} object. \\
+\hline
+{\em room\+Name} & Name of the room where the device will be added. \\
+\hline
+{\em device\+Name} & Name of the device to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_admin_add7047c934e268997ec45eafc93e29c4}\index{Admin@{Admin}!addDevice@{addDevice}}
+\index{addDevice@{addDevice}!Admin@{Admin}}
+\doxysubsubsection{\texorpdfstring{addDevice()}{addDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_admin_add7047c934e268997ec45eafc93e29c4} 
+void Admin\+::add\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}}]{room}{, }\item[{\mbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*}}]{device}{}\end{DoxyParamCaption})}
+
+
+
+Adds a device to a room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & Pointer to the \doxylink{class_room}{Room} object where the device will be added. \\
+\hline
+{\em device} & Pointer to the \doxylink{class_device}{Device} object to be added.\\
+\hline
+{\em room} & Pointer to the \doxylink{class_room}{Room} object. \\
+\hline
+{\em device} & Pointer to the \doxylink{class_device}{Device} object to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_admin_aed1ee1c13d5b5f012398d49c88c5099a}\index{Admin@{Admin}!addUser@{addUser}}
+\index{addUser@{addUser}!Admin@{Admin}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_admin_aed1ee1c13d5b5f012398d49c88c5099a} 
+void Admin\+::add\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*}}]{home}{, }\item[{std\+::string}]{name}{, }\item[{std\+::string}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Adds a user to the home system using their nickname and password. 
+
+Adds a user to the home system using a nickname and password.
+
+
+\begin{DoxyParams}{Parameters}
+{\em home} & Pointer to the \doxylink{class_home}{Home} object where the user will be added. \\
+\hline
+{\em name} & The nickname of the user to be added. \\
+\hline
+{\em password} & The password of the user to be added.\\
+\hline
+{\em home} & Pointer to the \doxylink{class_home}{Home} object. \\
+\hline
+{\em name} & Nickname of the user. \\
+\hline
+{\em password} & Password of the user. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_admin_a3dd608cf17a49184b9f0b1da3c90c77c}\index{Admin@{Admin}!addUser@{addUser}}
+\index{addUser@{addUser}!Admin@{Admin}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_admin_a3dd608cf17a49184b9f0b1da3c90c77c} 
+void Admin\+::add\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*}}]{home}{, }\item[{\mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*}}]{user}{}\end{DoxyParamCaption})}
+
+
+
+Adds a user to the home system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em home} & Pointer to the \doxylink{class_home}{Home} object where the user will be added. \\
+\hline
+{\em user} & Pointer to the \doxylink{class_user}{User} object to be added.\\
+\hline
+{\em home} & Pointer to the \doxylink{class_home}{Home} object. \\
+\hline
+{\em user} & Pointer to the \doxylink{class_user}{User} object to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_admin_aaf6c168436b866104af146bfbe4057a2}\index{Admin@{Admin}!removeDevice@{removeDevice}}
+\index{removeDevice@{removeDevice}!Admin@{Admin}}
+\doxysubsubsection{\texorpdfstring{removeDevice()}{removeDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_admin_aaf6c168436b866104af146bfbe4057a2} 
+void Admin\+::remove\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*}}]{home}{, }\item[{std\+::string}]{room\+Name}{, }\item[{std\+::string}]{device\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Removes a device from a specific room in the home using device and room names. 
+
+Removes a device from a specific room in the home by name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em home} & Pointer to the \doxylink{class_home}{Home} object where the room is located. \\
+\hline
+{\em room\+Name} & The name of the room where the device is located. \\
+\hline
+{\em device\+Name} & The name of the device to be removed.\\
+\hline
+{\em home} & Pointer to the \doxylink{class_home}{Home} object. \\
+\hline
+{\em room\+Name} & Name of the room where the device will be removed from. \\
+\hline
+{\em device\+Name} & Name of the device to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_admin_abcb61a617334308255a1fb5cf1c1e6aa}\index{Admin@{Admin}!removeDevice@{removeDevice}}
+\index{removeDevice@{removeDevice}!Admin@{Admin}}
+\doxysubsubsection{\texorpdfstring{removeDevice()}{removeDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_admin_abcb61a617334308255a1fb5cf1c1e6aa} 
+void Admin\+::remove\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}}]{room}{, }\item[{\mbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*}}]{device}{}\end{DoxyParamCaption})}
+
+
+
+Removes a device from a room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & Pointer to the \doxylink{class_room}{Room} object where the device is located. \\
+\hline
+{\em device} & Pointer to the \doxylink{class_device}{Device} object to be removed.\\
+\hline
+{\em room} & Pointer to the \doxylink{class_room}{Room} object. \\
+\hline
+{\em device} & Pointer to the \doxylink{class_device}{Device} object to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_admin_af17035ac60854c300f69480055d6e1e5}\index{Admin@{Admin}!removeUser@{removeUser}}
+\index{removeUser@{removeUser}!Admin@{Admin}}
+\doxysubsubsection{\texorpdfstring{removeUser()}{removeUser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_admin_af17035ac60854c300f69480055d6e1e5} 
+void Admin\+::remove\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*}}]{home}{, }\item[{std\+::string \&}]{nickname}{}\end{DoxyParamCaption})}
+
+
+
+Removes a user from the home system using their nickname. 
+
+Removes a user from the home system by their nickname.
+
+
+\begin{DoxyParams}{Parameters}
+{\em home} & Pointer to the \doxylink{class_home}{Home} object where the user is located. \\
+\hline
+{\em nickname} & The nickname of the user to be removed.\\
+\hline
+{\em home} & Pointer to the \doxylink{class_home}{Home} object. \\
+\hline
+{\em nickname} & Nickname of the user to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_admin_af5bbef0735cb16c95a38f7d8bdfa3cac}\index{Admin@{Admin}!removeUser@{removeUser}}
+\index{removeUser@{removeUser}!Admin@{Admin}}
+\doxysubsubsection{\texorpdfstring{removeUser()}{removeUser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_admin_af5bbef0735cb16c95a38f7d8bdfa3cac} 
+void Admin\+::remove\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*}}]{home}{, }\item[{\mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*}}]{user}{}\end{DoxyParamCaption})}
+
+
+
+Removes a user from the home system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em home} & Pointer to the \doxylink{class_home}{Home} object where the user is located. \\
+\hline
+{\em user} & Pointer to the \doxylink{class_user}{User} object to be removed.\\
+\hline
+{\em home} & Pointer to the \doxylink{class_home}{Home} object. \\
+\hline
+{\em user} & Pointer to the \doxylink{class_user}{User} object to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_admin_8h}{Admin.\+h}}\item 
+\mbox{\hyperlink{_admin_8cpp}{Admin.\+cpp}}\end{DoxyCompactItemize}

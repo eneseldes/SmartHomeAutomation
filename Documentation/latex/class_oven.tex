@@ -1,0 +1,339 @@
+\doxysection{Oven Class Reference}
+\hypertarget{class_oven}{}\label{class_oven}\index{Oven@{Oven}}
+
+
+A class representing an oven with different cooking modes and temperature control.  
+
+
+
+
+{\ttfamily \#include $<$Oven.\+h$>$}
+
+Inheritance diagram for Oven\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_oven}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_oven_a1d6cc8f1117787a5a38288e18026e681}{Oven}} ()
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the oven with default values. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_oven_aa910ac14584d94d3ff5f08d3f39ce701}{get\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current temperature of the oven. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_oven_a37800a034b447e27db5f933564886396}{set\+Temperature}} (int \mbox{\hyperlink{class_oven_a8cec1f10edb31bf52e45adc2aad319b5}{temperature}})
+\begin{DoxyCompactList}\small\item\em Sets the oven\textquotesingle{}s temperature. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_oven_abed63b85aa8785e1ad6705c45388d64a}{set\+Mode}} (std\+::string \mbox{\hyperlink{class_has_mode_adec03ee7a1f2cb05b90a4e8557dc8459}{operation\+Type}}) override
+\begin{DoxyCompactList}\small\item\em Sets the operation mode of the oven. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_oven_abd4a50da5f3dd9e3f4c67eaf34fcc34a}{get\+Mode}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the current operation mode of the oven. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_oven_a0f698ab9f83f3b334d859c7a136b566e}{reset}} () override
+\begin{DoxyCompactList}\small\item\em Resets the oven to its default state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_oven_aa086f2b0d1eb14a895d8e4d70e2bbf18}{display}} () const
+\begin{DoxyCompactList}\small\item\em Displays information about the oven. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_oven_a030cf6e1af0a09160fc3846712a4f5ef}{thread\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Gets the thread level of the oven. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_oven_a31d5d5cb80a2a226c4cd9cf3e316438a}{get\+Energy\+Consumption}} () const
+\begin{DoxyCompactList}\small\item\em Gets the energy consumption of the oven. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_has_mode}{Has\+Mode}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_has_mode_a039f3e1180a54709fbab5da9aecff340}{Has\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_has_mode}{Has\+Mode} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_has_mode_ad987c247c91a305449054278b06ff410}{set\+Working}} (bool running)
+\begin{DoxyCompactList}\small\item\em Sets the operational state of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_has_mode_a1d47ccaca43ada751614822b0f21defe}{is\+Working}} ()
+\begin{DoxyCompactList}\small\item\em Gets the operational state of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_has_mode_a0d73e85bf108707748ac7e707a16c6e9}{set\+Timer}} (int timer)
+\begin{DoxyCompactList}\small\item\em Sets the timer for the device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_has_mode_a51ec2ab1c2984e06c5fad2683a6bd2ae}{get\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current timer value for the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_has_mode_acb395c983ef36d12b181dcfd2f0edfc3}{stop\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Stops the timer for the device. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_has_mode_abcd509b7df6fa63304fcd363c18c21d0}{get\+Modes}} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of available operation modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_a64ba12dcc5f4267486c5d545d04dcf68}{Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes the device as inactive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_device_a2f308f1fe5e1e32b37333887eba268a4}{Device}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device}{Device} object with a specified name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_device_a6fef4f7180512c7517c9696cd95e503a}{\texorpdfstring{$\sim$}{\string~}\+Device}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup in derived classes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a}{open}} ()
+\begin{DoxyCompactList}\small\item\em Opens the device, setting it as active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1efd8ba466deb39035ee8d4d97a996d3}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes the device, setting it as inactive. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_device_a16847918d8607c8fec47ab72cc8500ff}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a203476ff55d58d4ac147072936f4eaeb}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the device is currently active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1973abf46f0e550e9843d55b7ca9b231}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ad013386d9389cbabaf245cbc651b17b3}{set\+Active}} (bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}})
+\begin{DoxyCompactList}\small\item\em Sets the active status of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a692408a9df0fc88df4eb869db4476002}{operator==}} (\mbox{\hyperlink{class_device}{Device}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two \doxylink{class_device}{Device} objects by their name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_oven_a8cec1f10edb31bf52e45adc2aad319b5}{temperature}}
+\begin{DoxyCompactList}\small\item\em Current temperature of the oven. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_oven_a34ab13de4431eef14c2e202fc8eb4ddb}{mode}}
+\begin{DoxyCompactList}\small\item\em Current operation mode of the oven. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_has_mode}{Has\+Mode}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_has_mode_adec03ee7a1f2cb05b90a4e8557dc8459}{operation\+Type}}
+\item 
+int \mbox{\hyperlink{class_has_mode_a14c72f923afaa0ffa6202db1742fbd8b}{device\+Timer}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_has_mode_aefbcd9f129aa5588e3ae89533b9f5b08}{modes}}
+\item 
+bool \mbox{\hyperlink{class_has_mode_afa7810fd399c424c8bad4a538f173fdc}{working}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_device_a37bc1fcd4f0433cc899bbc835e298704}{device\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}}
+\begin{DoxyCompactList}\small\item\em The active status of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing an oven with different cooking modes and temperature control. 
+
+A class representing an oven with various modes and temperature control.
+
+The \doxylink{class_oven}{Oven} class is designed to simulate an oven with multiple operation modes such as Conventional, Fan, Grill, and Defrost. It allows setting and getting the oven\textquotesingle{}s temperature, selecting the operation mode, and controlling energy consumption and thread levels.
+
+This class provides functionality to set and get the temperature of the oven, select the operation mode (e.\+g., Conventional, Fan, Grill, Defrost), manage energy consumption, and perform reset operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_oven_a1d6cc8f1117787a5a38288e18026e681}\index{Oven@{Oven}!Oven@{Oven}}
+\index{Oven@{Oven}!Oven@{Oven}}
+\doxysubsubsection{\texorpdfstring{Oven()}{Oven()}}
+{\footnotesize\ttfamily \label{class_oven_a1d6cc8f1117787a5a38288e18026e681} 
+Oven\+::\+Oven (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes the oven with default values. 
+
+This constructor sets the device name to "{}\+Oven"{}, initializes available modes, and sets the default temperature. \texorpdfstring{$<$}{<} The name of the device.
+
+\texorpdfstring{$<$}{<} Available operation modes for the oven.
+
+\texorpdfstring{$<$}{<} Default temperature.
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_oven_aa086f2b0d1eb14a895d8e4d70e2bbf18}\index{Oven@{Oven}!display@{display}}
+\index{display@{display}!Oven@{Oven}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{class_oven_aa086f2b0d1eb14a895d8e4d70e2bbf18} 
+void Oven\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Displays information about the oven. 
+
+This method can display details about the oven\textquotesingle{}s operation mode, temperature, etc.
+
+\begin{DoxyNote}{Note}
+This is a placeholder function and should be expanded based on the UI requirements.
+\end{DoxyNote}
+This method displays the oven\textquotesingle{}s name, current operation mode, and other relevant information. 
+
+Implements \mbox{\hyperlink{class_device_a81a6b84413e41787ac5295a0b3647724}{Device}}.
+
+\Hypertarget{class_oven_a31d5d5cb80a2a226c4cd9cf3e316438a}\index{Oven@{Oven}!getEnergyConsumption@{getEnergyConsumption}}
+\index{getEnergyConsumption@{getEnergyConsumption}!Oven@{Oven}}
+\doxysubsubsection{\texorpdfstring{getEnergyConsumption()}{getEnergyConsumption()}}
+{\footnotesize\ttfamily \label{class_oven_a31d5d5cb80a2a226c4cd9cf3e316438a} 
+double Oven\+::get\+Energy\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the energy consumption of the oven. 
+
+This method returns the energy consumption of the oven in watts.
+
+\begin{DoxyReturn}{Returns}
+double The energy consumption of the oven in watts.
+\end{DoxyReturn}
+This method returns the energy consumption of the oven in watts. In this case, the energy consumption is a constant value.
+
+\begin{DoxyReturn}{Returns}
+double The energy consumption of the oven in watts. 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Example energy consumption in watts.
+
+Implements \mbox{\hyperlink{class_device_a1f3676c3dad0ab90bfb4ae33b61e7c2d}{Device}}.
+
+\Hypertarget{class_oven_abd4a50da5f3dd9e3f4c67eaf34fcc34a}\index{Oven@{Oven}!getMode@{getMode}}
+\index{getMode@{getMode}!Oven@{Oven}}
+\doxysubsubsection{\texorpdfstring{getMode()}{getMode()}}
+{\footnotesize\ttfamily \label{class_oven_abd4a50da5f3dd9e3f4c67eaf34fcc34a} 
+std\+::string Oven\+::get\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the current operation mode of the oven. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The current operation mode of the oven.
+\end{DoxyReturn}
+This method returns the current operation mode of the oven.
+
+\begin{DoxyReturn}{Returns}
+std\+::string The current operation mode of the oven. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_has_mode_aeb84eb09fb9dac660e63f47ae07d2e9e}{Has\+Mode}}.
+
+\Hypertarget{class_oven_aa910ac14584d94d3ff5f08d3f39ce701}\index{Oven@{Oven}!getTemperature@{getTemperature}}
+\index{getTemperature@{getTemperature}!Oven@{Oven}}
+\doxysubsubsection{\texorpdfstring{getTemperature()}{getTemperature()}}
+{\footnotesize\ttfamily \label{class_oven_aa910ac14584d94d3ff5f08d3f39ce701} 
+int Oven\+::get\+Temperature (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current temperature of the oven. 
+
+\begin{DoxyReturn}{Returns}
+int The current temperature of the oven.
+\end{DoxyReturn}
+This method returns the current temperature of the oven.
+
+\begin{DoxyReturn}{Returns}
+int The current temperature of the oven. 
+\end{DoxyReturn}
+\Hypertarget{class_oven_a0f698ab9f83f3b334d859c7a136b566e}\index{Oven@{Oven}!reset@{reset}}
+\index{reset@{reset}!Oven@{Oven}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \label{class_oven_a0f698ab9f83f3b334d859c7a136b566e} 
+void Oven\+::reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resets the oven to its default state. 
+
+This method resets the oven\textquotesingle{}s operation mode to "{}\+Standby"{} and sets the temperature to 0.
+
+This method resets the oven by setting its operation mode to "{}\+Standby"{} and its temperature to 0. \texorpdfstring{$<$}{<} Resets the mode to "{}\+Standby"{}.
+
+\texorpdfstring{$<$}{<} Resets the temperature to 0.
+
+Implements \mbox{\hyperlink{class_has_mode_af705f255a0c51d36909478d52ddf6a7e}{Has\+Mode}}.
+
+\Hypertarget{class_oven_abed63b85aa8785e1ad6705c45388d64a}\index{Oven@{Oven}!setMode@{setMode}}
+\index{setMode@{setMode}!Oven@{Oven}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily \label{class_oven_abed63b85aa8785e1ad6705c45388d64a} 
+void Oven\+::set\+Mode (\begin{DoxyParamCaption}\item[{std\+::string}]{operation\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the operation mode of the oven. 
+
+This method checks if the provided operation type is valid and sets the mode accordingly. If the mode is invalid, it shows an error message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+Type} & The mode to set the oven to (e.\+g., "{}\+Conventional"{}, "{}\+Fan"{}).\\
+\hline
+\end{DoxyParams}
+This method sets the operation mode of the oven. It checks if the provided mode is valid and sets it accordingly. If the mode is invalid, it shows an error message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+Type} & The operation mode to set the oven to. \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Displays an error message if the mode is invalid.
+
+Implements \mbox{\hyperlink{class_has_mode_af346155b61989061fd6bf776cadd32dd}{Has\+Mode}}.
+
+\Hypertarget{class_oven_a37800a034b447e27db5f933564886396}\index{Oven@{Oven}!setTemperature@{setTemperature}}
+\index{setTemperature@{setTemperature}!Oven@{Oven}}
+\doxysubsubsection{\texorpdfstring{setTemperature()}{setTemperature()}}
+{\footnotesize\ttfamily \label{class_oven_a37800a034b447e27db5f933564886396} 
+void Oven\+::set\+Temperature (\begin{DoxyParamCaption}\item[{int}]{temperature}{}\end{DoxyParamCaption})}
+
+
+
+Sets the oven\textquotesingle{}s temperature. 
+
+Sets the temperature of the oven.
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature} & The temperature value to set.\\
+\hline
+\end{DoxyParams}
+This method sets the oven\textquotesingle{}s temperature to the specified value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature} & The temperature to set the oven to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_oven_a030cf6e1af0a09160fc3846712a4f5ef}\index{Oven@{Oven}!threadLevel@{threadLevel}}
+\index{threadLevel@{threadLevel}!Oven@{Oven}}
+\doxysubsubsection{\texorpdfstring{threadLevel()}{threadLevel()}}
+{\footnotesize\ttfamily \label{class_oven_a030cf6e1af0a09160fc3846712a4f5ef} 
+double Oven\+::thread\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the thread level of the oven. 
+
+This method returns the processing complexity or computational resources required for the oven\textquotesingle{}s operation.
+
+\begin{DoxyReturn}{Returns}
+double The thread level representing the computational demand of the oven.
+\end{DoxyReturn}
+This method returns the processing thread level of the oven. It represents the computational complexity or the resources required for its operation.
+
+\begin{DoxyReturn}{Returns}
+double The thread level of the oven. 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Example thread level.
+
+Implements \mbox{\hyperlink{class_device_a053c15332a49b1c890631fb4a24525fa}{Device}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_oven_a34ab13de4431eef14c2e202fc8eb4ddb}\index{Oven@{Oven}!mode@{mode}}
+\index{mode@{mode}!Oven@{Oven}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily \label{class_oven_a34ab13de4431eef14c2e202fc8eb4ddb} 
+std\+::string Oven\+::mode\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current operation mode of the oven. 
+
+\Hypertarget{class_oven_a8cec1f10edb31bf52e45adc2aad319b5}\index{Oven@{Oven}!temperature@{temperature}}
+\index{temperature@{temperature}!Oven@{Oven}}
+\doxysubsubsection{\texorpdfstring{temperature}{temperature}}
+{\footnotesize\ttfamily \label{class_oven_a8cec1f10edb31bf52e45adc2aad319b5} 
+int Oven\+::temperature\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current temperature of the oven. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_oven_8h}{Oven.\+h}}\item 
+\mbox{\hyperlink{_oven_8cpp}{Oven.\+cpp}}\end{DoxyCompactItemize}

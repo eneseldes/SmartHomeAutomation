@@ -1,0 +1,326 @@
+\doxysection{Room Class Reference}
+\hypertarget{class_room}{}\label{class_room}\index{Room@{Room}}
+
+
+Represents a room in a smart home system, containing devices and users, with attributes like temperature and air conditioning.  
+
+
+
+
+{\ttfamily \#include $<$Room.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_room_ab932b4d5bafaac3998fcead3baafea08}{Room}} (const std\+::string \&\mbox{\hyperlink{class_room_a72dc5f84fd63eb54d53bc9d992ca6dcb}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the room with a name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_room_a508697104b1bdce37058c029ea5d7b2b}{\texorpdfstring{$\sim$}{\string~}\+Room}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor (default). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_a38ba402a45f57fe1b53b4ecf1accbc09}{has\+Risk}} () const
+\begin{DoxyCompactList}\small\item\em Checks if any devices in the room have a high thread level, indicating a risk. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_a9ef234056ed6ff8c7c777061f7079027}{has\+Users}} () const
+\begin{DoxyCompactList}\small\item\em Checks if there are any users present in the room. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_room_a5d63c2136ca00c4c8bc6c101f03220ae}{get\+Temperature}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current temperature of the room. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_room_a83be7f2086f876d4fcd31e190fafc98e}{get\+Air\+Condition}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current air conditioning level of the room. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_room_a767de198f529425dd4ba81810e44d6e4}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the room. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_room_a6911381f29d077cf9e4b835b41b3c03e}{get\+Devices}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the list of devices in the room. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_room_a4e02c28732d478c277c104e2c31dbdd2}{get\+Users}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the list of users in the room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_abf73b1f0a003a9dd5739ef7814f41203}{set\+Temperature}} (int \mbox{\hyperlink{class_room_a7055433da327f4d9a911dc2653dfb26e}{temperature}})
+\begin{DoxyCompactList}\small\item\em Sets the temperature of the room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_a3c5675360c31fb4cc134484a55b80b04}{set\+Air\+Condition}} (int \mbox{\hyperlink{class_room_ad98f35d12715fcb464ca61a68688f19e}{air\+Condition}})
+\begin{DoxyCompactList}\small\item\em Sets the air conditioning level of the room. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_a8f0cbb398c69d78be818923df8580f73}{operator==}} (\mbox{\hyperlink{class_room}{Room}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two rooms to see if they have the same name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_room_a72dc5f84fd63eb54d53bc9d992ca6dcb}{name}}
+\begin{DoxyCompactList}\small\item\em The name of the room. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_room_a7055433da327f4d9a911dc2653dfb26e}{temperature}}
+\begin{DoxyCompactList}\small\item\em The current temperature of the room in Celsius. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_room_ad98f35d12715fcb464ca61a68688f19e}{air\+Condition}}
+\begin{DoxyCompactList}\small\item\em The current air conditioning level of the room (percentage). \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_room_a3b5a022cb5e38a7872430501a0189101}{devices}}
+\begin{DoxyCompactList}\small\item\em The devices contained in the room. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_room_afa2dcad09e07060b5af73f4fe76ef2bf}{users}}
+\begin{DoxyCompactList}\small\item\em The users in the room. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a room in a smart home system, containing devices and users, with attributes like temperature and air conditioning. 
+
+Represents a room in a smart home system.
+
+The \doxylink{class_room}{Room} class allows managing the room\textquotesingle{}s temperature, air conditioning, and detecting if there are risks or users in the room. It also provides methods to manipulate the devices and users within the room.
+
+The \doxylink{class_room}{Room} class contains information about the room\textquotesingle{}s name, temperature, air conditioning level, and the devices and users present within it. This class also provides methods to manage the room\textquotesingle{}s environment and check if there are any risks associated with the devices. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_room_ab932b4d5bafaac3998fcead3baafea08}\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{Room()}{Room()}}
+{\footnotesize\ttfamily \label{class_room_ab932b4d5bafaac3998fcead3baafea08} 
+Room\+::\+Room (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize the room with a name. 
+
+This constructor sets the initial temperature to 20°C and air conditioning to 75\%. It also initializes empty lists for devices and users.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the room. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_room_a508697104b1bdce37058c029ea5d7b2b}\index{Room@{Room}!````~Room@{\texorpdfstring{$\sim$}{\string~}Room}}
+\index{````~Room@{\texorpdfstring{$\sim$}{\string~}Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Room()}{\string~Room()}}
+{\footnotesize\ttfamily \label{class_room_a508697104b1bdce37058c029ea5d7b2b} 
+virtual Room\+::\texorpdfstring{$\sim$}{\string~}\+Room (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destructor (default). 
+
+The destructor is virtual, allowing for proper cleanup of derived classes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_room_a83be7f2086f876d4fcd31e190fafc98e}\index{Room@{Room}!getAirCondition@{getAirCondition}}
+\index{getAirCondition@{getAirCondition}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{getAirCondition()}{getAirCondition()}}
+{\footnotesize\ttfamily \label{class_room_a83be7f2086f876d4fcd31e190fafc98e} 
+int Room\+::get\+Air\+Condition (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current air conditioning level of the room. 
+
+\begin{DoxyReturn}{Returns}
+int The current air conditioning level, as a percentage.
+
+int The air conditioning level, usually a percentage. 
+\end{DoxyReturn}
+\Hypertarget{class_room_a6911381f29d077cf9e4b835b41b3c03e}\index{Room@{Room}!getDevices@{getDevices}}
+\index{getDevices@{getDevices}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{getDevices()}{getDevices()}}
+{\footnotesize\ttfamily \label{class_room_a6911381f29d077cf9e4b835b41b3c03e} 
+std\+::vector$<$ \mbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*} $>$ \& Room\+::get\+Devices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the list of devices in the room. 
+
+Gets a reference to the vector of devices in the room.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Device\texorpdfstring{$\ast$}{*}$>$\& A reference to the list of devices in the room. 
+\end{DoxyReturn}
+\Hypertarget{class_room_a767de198f529425dd4ba81810e44d6e4}\index{Room@{Room}!getName@{getName}}
+\index{getName@{getName}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_room_a767de198f529425dd4ba81810e44d6e4} 
+std\+::string Room\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the room. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The name of the room. 
+\end{DoxyReturn}
+\Hypertarget{class_room_a5d63c2136ca00c4c8bc6c101f03220ae}\index{Room@{Room}!getTemperature@{getTemperature}}
+\index{getTemperature@{getTemperature}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{getTemperature()}{getTemperature()}}
+{\footnotesize\ttfamily \label{class_room_a5d63c2136ca00c4c8bc6c101f03220ae} 
+int Room\+::get\+Temperature (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current temperature of the room. 
+
+\begin{DoxyReturn}{Returns}
+int The current temperature of the room in Celsius.
+
+int The current temperature in the room in Celsius. 
+\end{DoxyReturn}
+\Hypertarget{class_room_a4e02c28732d478c277c104e2c31dbdd2}\index{Room@{Room}!getUsers@{getUsers}}
+\index{getUsers@{getUsers}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{getUsers()}{getUsers()}}
+{\footnotesize\ttfamily \label{class_room_a4e02c28732d478c277c104e2c31dbdd2} 
+std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} $>$ \& Room\+::get\+Users (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the list of users in the room. 
+
+Gets a reference to the vector of users in the room.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+User\texorpdfstring{$\ast$}{*}$>$\& A reference to the list of users in the room. 
+\end{DoxyReturn}
+\Hypertarget{class_room_a38ba402a45f57fe1b53b4ecf1accbc09}\index{Room@{Room}!hasRisk@{hasRisk}}
+\index{hasRisk@{hasRisk}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{hasRisk()}{hasRisk()}}
+{\footnotesize\ttfamily \label{class_room_a38ba402a45f57fe1b53b4ecf1accbc09} 
+bool Room\+::has\+Risk (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if any devices in the room have a high thread level, indicating a risk. 
+
+Checks if the room contains any risky devices based on their thread level.
+
+This method checks the thread level of all devices in the room. If any device\textquotesingle{}s thread level exceeds 50, it returns true, indicating a risk. Otherwise, it returns false.
+
+\begin{DoxyReturn}{Returns}
+bool True if any device poses a risk, otherwise false.
+\end{DoxyReturn}
+A device is considered risky if its thread level is greater than 50.
+
+\begin{DoxyReturn}{Returns}
+bool Returns true if any device in the room has a thread level greater than 50, indicating a risk; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{class_room_a9ef234056ed6ff8c7c777061f7079027}\index{Room@{Room}!hasUsers@{hasUsers}}
+\index{hasUsers@{hasUsers}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{hasUsers()}{hasUsers()}}
+{\footnotesize\ttfamily \label{class_room_a9ef234056ed6ff8c7c777061f7079027} 
+bool Room\+::has\+Users (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if there are any users present in the room. 
+
+Checks if there are any users in the room.
+
+\begin{DoxyReturn}{Returns}
+bool Returns true if there are users in the room, false otherwise.
+
+bool Returns true if there are one or more users in the room; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{class_room_a8f0cbb398c69d78be818923df8580f73}\index{Room@{Room}!operator==@{operator==}}
+\index{operator==@{operator==}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_room_a8f0cbb398c69d78be818923df8580f73} 
+bool Room\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Compares two rooms to see if they have the same name. 
+
+Compares two rooms by their names.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The room to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true if the rooms have the same name, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other room to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true if the names of both rooms are equal; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{class_room_a3c5675360c31fb4cc134484a55b80b04}\index{Room@{Room}!setAirCondition@{setAirCondition}}
+\index{setAirCondition@{setAirCondition}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{setAirCondition()}{setAirCondition()}}
+{\footnotesize\ttfamily \label{class_room_a3c5675360c31fb4cc134484a55b80b04} 
+void Room\+::set\+Air\+Condition (\begin{DoxyParamCaption}\item[{int}]{air\+Condition}{}\end{DoxyParamCaption})}
+
+
+
+Sets the air conditioning level of the room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em air\+Condition} & The new air conditioning level, as a percentage.\\
+\hline
+{\em air\+Condition} & The new air conditioning level to set, usually as a percentage. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_room_abf73b1f0a003a9dd5739ef7814f41203}\index{Room@{Room}!setTemperature@{setTemperature}}
+\index{setTemperature@{setTemperature}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{setTemperature()}{setTemperature()}}
+{\footnotesize\ttfamily \label{class_room_abf73b1f0a003a9dd5739ef7814f41203} 
+void Room\+::set\+Temperature (\begin{DoxyParamCaption}\item[{int}]{temperature}{}\end{DoxyParamCaption})}
+
+
+
+Sets the temperature of the room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature} & The new temperature of the room in Celsius.\\
+\hline
+{\em temperature} & The new temperature to set for the room in Celsius. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_room_ad98f35d12715fcb464ca61a68688f19e}\index{Room@{Room}!airCondition@{airCondition}}
+\index{airCondition@{airCondition}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{airCondition}{airCondition}}
+{\footnotesize\ttfamily \label{class_room_ad98f35d12715fcb464ca61a68688f19e} 
+int Room\+::air\+Condition\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The current air conditioning level of the room (percentage). 
+
+\Hypertarget{class_room_a3b5a022cb5e38a7872430501a0189101}\index{Room@{Room}!devices@{devices}}
+\index{devices@{devices}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{devices}{devices}}
+{\footnotesize\ttfamily \label{class_room_a3b5a022cb5e38a7872430501a0189101} 
+std\+::vector$<$\mbox{\hyperlink{class_device}{Device}} \texorpdfstring{$\ast$}{*}$>$ Room\+::devices\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The devices contained in the room. 
+
+\Hypertarget{class_room_a72dc5f84fd63eb54d53bc9d992ca6dcb}\index{Room@{Room}!name@{name}}
+\index{name@{name}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{class_room_a72dc5f84fd63eb54d53bc9d992ca6dcb} 
+std\+::string Room\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The name of the room. 
+
+\Hypertarget{class_room_a7055433da327f4d9a911dc2653dfb26e}\index{Room@{Room}!temperature@{temperature}}
+\index{temperature@{temperature}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{temperature}{temperature}}
+{\footnotesize\ttfamily \label{class_room_a7055433da327f4d9a911dc2653dfb26e} 
+int Room\+::temperature\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The current temperature of the room in Celsius. 
+
+\Hypertarget{class_room_afa2dcad09e07060b5af73f4fe76ef2bf}\index{Room@{Room}!users@{users}}
+\index{users@{users}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily \label{class_room_afa2dcad09e07060b5af73f4fe76ef2bf} 
+std\+::vector$<$\mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*}$>$ Room\+::users\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The users in the room. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_room_8h}{Room.\+h}}\item 
+\mbox{\hyperlink{_room_8cpp}{Room.\+cpp}}\end{DoxyCompactItemize}

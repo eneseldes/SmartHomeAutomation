@@ -1,0 +1,207 @@
+\doxysection{Security\+Alarm Class Reference}
+\hypertarget{class_security_alarm}{}\label{class_security_alarm}\index{SecurityAlarm@{SecurityAlarm}}
+
+
+Represents a security alarm device in a smart home system, which extends the \doxylink{class_device}{Device} class.  
+
+
+
+
+{\ttfamily \#include $<$Security\+Alarm.\+h$>$}
+
+Inheritance diagram for Security\+Alarm\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_security_alarm}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_security_alarm_a3640d48d806ababc55b18294c7c4ac87}{Security\+Alarm}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_security_alarm}{Security\+Alarm} object with an initial voice level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_security_alarm_aa7eff2969be8fec7e5adfdc25ec6c1aa}{get\+Voice\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current voice level of the alarm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_security_alarm_a2b0fb05e43155b6ed6cec6cba432e3dc}{set\+Voice\+Level}} (int \mbox{\hyperlink{class_security_alarm_a03dbd0f931c412f8b42346d5d1e05760}{voice\+Level}})
+\begin{DoxyCompactList}\small\item\em Sets the voice level of the alarm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_security_alarm_ae18021a62c341eb87bef78b6d4519c8a}{ring}} () const
+\begin{DoxyCompactList}\small\item\em Rings the alarm at the current voice level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_security_alarm_a97997130946345ff771706d801682e82}{display}} () const override
+\begin{DoxyCompactList}\small\item\em Displays the alarm\textquotesingle{}s name and voice level. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_security_alarm_a7deea794b3cd1cf622098fc0ad90a329}{get\+Energy\+Consumption}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the energy consumption of the alarm. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_security_alarm_aa4433b071056f738c79400c84e0706ed}{thread\+Level}} () override
+\begin{DoxyCompactList}\small\item\em Gets the thread level of the alarm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_a64ba12dcc5f4267486c5d545d04dcf68}{Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes the device as inactive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_device_a2f308f1fe5e1e32b37333887eba268a4}{Device}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device}{Device} object with a specified name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_device_a6fef4f7180512c7517c9696cd95e503a}{\texorpdfstring{$\sim$}{\string~}\+Device}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup in derived classes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a}{open}} ()
+\begin{DoxyCompactList}\small\item\em Opens the device, setting it as active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1efd8ba466deb39035ee8d4d97a996d3}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes the device, setting it as inactive. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_device_a16847918d8607c8fec47ab72cc8500ff}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a203476ff55d58d4ac147072936f4eaeb}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the device is currently active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1973abf46f0e550e9843d55b7ca9b231}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ad013386d9389cbabaf245cbc651b17b3}{set\+Active}} (bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}})
+\begin{DoxyCompactList}\small\item\em Sets the active status of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a692408a9df0fc88df4eb869db4476002}{operator==}} (\mbox{\hyperlink{class_device}{Device}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two \doxylink{class_device}{Device} objects by their name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_security_alarm_a03dbd0f931c412f8b42346d5d1e05760}{voice\+Level}}
+\begin{DoxyCompactList}\small\item\em The voice level of the alarm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_device_a37bc1fcd4f0433cc899bbc835e298704}{device\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}}
+\begin{DoxyCompactList}\small\item\em The active status of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a security alarm device in a smart home system, which extends the \doxylink{class_device}{Device} class. 
+
+Represents a security alarm device in a smart home system, inheriting from the \doxylink{class_device}{Device} class.
+
+The \doxylink{class_security_alarm}{Security\+Alarm} class manages the voice level of the alarm and provides methods to control its behavior, including ringing, setting voice levels, and displaying information about the alarm.
+
+The \doxylink{class_security_alarm}{Security\+Alarm} class extends the \doxylink{class_device}{Device} class and allows for controlling the voice level of the alarm, along with methods for ringing, displaying the alarm\textquotesingle{}s status, and calculating its energy consumption. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_security_alarm_a3640d48d806ababc55b18294c7c4ac87}\index{SecurityAlarm@{SecurityAlarm}!SecurityAlarm@{SecurityAlarm}}
+\index{SecurityAlarm@{SecurityAlarm}!SecurityAlarm@{SecurityAlarm}}
+\doxysubsubsection{\texorpdfstring{SecurityAlarm()}{SecurityAlarm()}}
+{\footnotesize\ttfamily \label{class_security_alarm_a3640d48d806ababc55b18294c7c4ac87} 
+Security\+Alarm\+::\+Security\+Alarm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{class_security_alarm}{Security\+Alarm} object with an initial voice level. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_security_alarm_a97997130946345ff771706d801682e82}\index{SecurityAlarm@{SecurityAlarm}!display@{display}}
+\index{display@{display}!SecurityAlarm@{SecurityAlarm}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{class_security_alarm_a97997130946345ff771706d801682e82} 
+void Security\+Alarm\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays the alarm\textquotesingle{}s name and voice level. 
+
+Shows the alarm\textquotesingle{}s name and current voice level in a readable format. This method overrides the display function of the \doxylink{class_device}{Device} class.
+
+Shows the alarm\textquotesingle{}s name and current voice level in a readable format. 
+
+Implements \mbox{\hyperlink{class_device_a81a6b84413e41787ac5295a0b3647724}{Device}}.
+
+\Hypertarget{class_security_alarm_a7deea794b3cd1cf622098fc0ad90a329}\index{SecurityAlarm@{SecurityAlarm}!getEnergyConsumption@{getEnergyConsumption}}
+\index{getEnergyConsumption@{getEnergyConsumption}!SecurityAlarm@{SecurityAlarm}}
+\doxysubsubsection{\texorpdfstring{getEnergyConsumption()}{getEnergyConsumption()}}
+{\footnotesize\ttfamily \label{class_security_alarm_a7deea794b3cd1cf622098fc0ad90a329} 
+double Security\+Alarm\+::get\+Energy\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the energy consumption of the alarm. 
+
+\begin{DoxyReturn}{Returns}
+double Returns the energy consumption of the alarm. If the alarm is active, the consumption is 15.\+5 units; otherwise, 0.\+0. This method overrides the get\+Energy\+Consumption function of the \doxylink{class_device}{Device} class.
+
+double Returns the energy consumption of the alarm. If the alarm is active, the consumption is 15.\+5 units; otherwise, 0.\+0. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_device_a1f3676c3dad0ab90bfb4ae33b61e7c2d}{Device}}.
+
+\Hypertarget{class_security_alarm_aa7eff2969be8fec7e5adfdc25ec6c1aa}\index{SecurityAlarm@{SecurityAlarm}!getVoiceLevel@{getVoiceLevel}}
+\index{getVoiceLevel@{getVoiceLevel}!SecurityAlarm@{SecurityAlarm}}
+\doxysubsubsection{\texorpdfstring{getVoiceLevel()}{getVoiceLevel()}}
+{\footnotesize\ttfamily \label{class_security_alarm_aa7eff2969be8fec7e5adfdc25ec6c1aa} 
+void Security\+Alarm\+::get\+Voice\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current voice level of the alarm. 
+
+Displays the voice level of the security alarm. \Hypertarget{class_security_alarm_ae18021a62c341eb87bef78b6d4519c8a}\index{SecurityAlarm@{SecurityAlarm}!ring@{ring}}
+\index{ring@{ring}!SecurityAlarm@{SecurityAlarm}}
+\doxysubsubsection{\texorpdfstring{ring()}{ring()}}
+{\footnotesize\ttfamily \label{class_security_alarm_ae18021a62c341eb87bef78b6d4519c8a} 
+void Security\+Alarm\+::ring (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Rings the alarm at the current voice level. 
+
+The alarm rings and displays the current voice level.
+
+Displays a message indicating that the alarm is ringing with the current voice level. \Hypertarget{class_security_alarm_a2b0fb05e43155b6ed6cec6cba432e3dc}\index{SecurityAlarm@{SecurityAlarm}!setVoiceLevel@{setVoiceLevel}}
+\index{setVoiceLevel@{setVoiceLevel}!SecurityAlarm@{SecurityAlarm}}
+\doxysubsubsection{\texorpdfstring{setVoiceLevel()}{setVoiceLevel()}}
+{\footnotesize\ttfamily \label{class_security_alarm_a2b0fb05e43155b6ed6cec6cba432e3dc} 
+void Security\+Alarm\+::set\+Voice\+Level (\begin{DoxyParamCaption}\item[{int}]{level}{}\end{DoxyParamCaption})}
+
+
+
+Sets the voice level of the alarm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em voice\+Level} & The new voice level to set for the alarm.\\
+\hline
+{\em level} & The new voice level to set for the alarm. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_security_alarm_aa4433b071056f738c79400c84e0706ed}\index{SecurityAlarm@{SecurityAlarm}!threadLevel@{threadLevel}}
+\index{threadLevel@{threadLevel}!SecurityAlarm@{SecurityAlarm}}
+\doxysubsubsection{\texorpdfstring{threadLevel()}{threadLevel()}}
+{\footnotesize\ttfamily \label{class_security_alarm_aa4433b071056f738c79400c84e0706ed} 
+double Security\+Alarm\+::thread\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the thread level of the alarm. 
+
+\begin{DoxyReturn}{Returns}
+double Returns the thread level of the alarm, which is set to 10.\+0. This method overrides the thread\+Level function of the \doxylink{class_device}{Device} class.
+
+double Returns the thread level of the alarm, which is set to 10.\+0 in this case. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_device_a053c15332a49b1c890631fb4a24525fa}{Device}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_security_alarm_a03dbd0f931c412f8b42346d5d1e05760}\index{SecurityAlarm@{SecurityAlarm}!voiceLevel@{voiceLevel}}
+\index{voiceLevel@{voiceLevel}!SecurityAlarm@{SecurityAlarm}}
+\doxysubsubsection{\texorpdfstring{voiceLevel}{voiceLevel}}
+{\footnotesize\ttfamily \label{class_security_alarm_a03dbd0f931c412f8b42346d5d1e05760} 
+int Security\+Alarm\+::voice\+Level\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The voice level of the alarm. 
+
+This variable stores the current voice level of the security alarm. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_security_alarm_8h}{Security\+Alarm.\+h}}\item 
+\mbox{\hyperlink{_security_alarm_8cpp}{Security\+Alarm.\+cpp}}\end{DoxyCompactItemize}

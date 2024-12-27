@@ -1,0 +1,36 @@
+\doxysection{Oven.\+h}
+\hypertarget{_oven_8h_source}{}\label{_oven_8h_source}\mbox{\hyperlink{_oven_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OVEN\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OVEN\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_has_mode_8h}{HasMode.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_oven}{Oven}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_has_mode}{HasMode}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_oven_a8cec1f10edb31bf52e45adc2aad319b5}{temperature}};\ }
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ \mbox{\hyperlink{class_oven_a34ab13de4431eef14c2e202fc8eb4ddb}{mode}};\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_oven_a1d6cc8f1117787a5a38288e18026e681}{Oven}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_oven_aa910ac14584d94d3ff5f08d3f39ce701}{getTemperature}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_oven_a37800a034b447e27db5f933564886396}{setTemperature}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_oven_a8cec1f10edb31bf52e45adc2aad319b5}{temperature}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_oven_abed63b85aa8785e1ad6705c45388d64a}{setMode}}(std::string\ \mbox{\hyperlink{class_has_mode_adec03ee7a1f2cb05b90a4e8557dc8459}{operationType}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ std::string\ \mbox{\hyperlink{class_oven_abd4a50da5f3dd9e3f4c67eaf34fcc34a}{getMode}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_oven_a0f698ab9f83f3b334d859c7a136b566e}{reset}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_oven_aa086f2b0d1eb14a895d8e4d70e2bbf18}{display}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_oven_a030cf6e1af0a09160fc3846712a4f5ef}{threadLevel}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_oven_a31d5d5cb80a2a226c4cd9cf3e316438a}{getEnergyConsumption}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ OVEN\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,39 @@
+Users
+admin,12345
+user,123
+Rooms
+Kitchen
+  Device: Thermostat
+  Device: Light
+  Device: Curtain
+  Device: SecurityAlarm
+  Device: Camera
+  Device: Dishwasher
+  Device: Oven
+  Device: Fridge
+LivingRoom
+  Device: Thermostat
+  Device: Light
+  Device: Curtain
+  Device: SecurityAlarm
+  Device: Camera
+  Device: TV
+Bathroom
+  Device: Thermostat
+  Device: Light
+  Device: Curtain
+  Device: SecurityAlarm
+  Device: Camera
+  Device: Washer
+Bedroom
+  Device: Thermostat
+  Device: Light
+  Device: Curtain
+  Device: SecurityAlarm
+  Device: Camera
+ChildrenRoom
+  Device: Thermostat
+  Device: Light
+  Device: Curtain
+  Device: SecurityAlarm
+  Device: Camera

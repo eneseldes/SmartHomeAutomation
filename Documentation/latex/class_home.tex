@@ -1,0 +1,254 @@
+\doxysection{Home Class Reference}
+\hypertarget{class_home}{}\label{class_home}\index{Home@{Home}}
+
+
+Singleton class that represents a home with users and rooms.  
+
+
+
+
+{\ttfamily \#include $<$Home.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_home_aa87f051efc8b9ef17a214b7602479dcc}{\texorpdfstring{$\sim$}{\string~}\+Home}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_home_a4f703e58090c9c8224aaf7b2f3bde844}{save\+State}} (const std\+::string \&file)
+\begin{DoxyCompactList}\small\item\em Saves the state of the home (users and rooms) to a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_home_a69599572a856d29f6cdd84278ae435b1}{load\+State}} (const std\+::string \&file)
+\begin{DoxyCompactList}\small\item\em Loads the state of the home from a file. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_home_ae8f699b5656b3a4d6aaf40b88c919aae}{get\+Users}} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of users in the home. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_home_a202bd92cc73fb5b7b442739e29b8d997}{get\+Rooms}} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of rooms in the home. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_home_a40ebc1deab44ca1b4951cd52012d5b9a}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Returns the single instance of the \doxylink{class_home}{Home} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_home_a5d44be1b3ccc10e7611de94f6992fa82}{Home}} ()=default
+\begin{DoxyCompactList}\small\item\em Private constructor for Singleton pattern. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_home_a96f1b04772b067f47f736204c642f636}{Home}} (const \mbox{\hyperlink{class_home}{Home}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted copy constructor to prevent copying. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_home}{Home}} \& \mbox{\hyperlink{class_home_a6971706aaee2933230cf5c69bffadfe4}{operator=}} (const \mbox{\hyperlink{class_home}{Home}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted assignment operator to prevent assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_home_a3bf89e4f507b428155526588883e9a6b}{users}}
+\begin{DoxyCompactList}\small\item\em List of users in the home. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_home_ae978440bd1c59da1c7adef5227a15a01}{rooms}}
+\begin{DoxyCompactList}\small\item\em List of rooms in the home. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_home_ab970b007569698fdbc8b01c9840973c3}{instance}} = nullptr
+\begin{DoxyCompactList}\small\item\em Static pointer to the single instance of the \doxylink{class_home}{Home} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class that represents a home with users and rooms. 
+
+The \doxylink{class_home}{Home} class follows the Singleton pattern to ensure only one instance of the home exists. It contains information about users and rooms in the home, and methods for saving and loading the state of the home. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_home_a5d44be1b3ccc10e7611de94f6992fa82}\index{Home@{Home}!Home@{Home}}
+\index{Home@{Home}!Home@{Home}}
+\doxysubsubsection{\texorpdfstring{Home()}{Home()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_home_a5d44be1b3ccc10e7611de94f6992fa82} 
+Home\+::\+Home (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+Private constructor for Singleton pattern. 
+
+\Hypertarget{class_home_a96f1b04772b067f47f736204c642f636}\index{Home@{Home}!Home@{Home}}
+\index{Home@{Home}!Home@{Home}}
+\doxysubsubsection{\texorpdfstring{Home()}{Home()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_home_a96f1b04772b067f47f736204c642f636} 
+Home\+::\+Home (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_home}{Home}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+Deleted copy constructor to prevent copying. 
+
+\Hypertarget{class_home_aa87f051efc8b9ef17a214b7602479dcc}\index{Home@{Home}!````~Home@{\texorpdfstring{$\sim$}{\string~}Home}}
+\index{````~Home@{\texorpdfstring{$\sim$}{\string~}Home}!Home@{Home}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Home()}{\string~Home()}}
+{\footnotesize\ttfamily \label{class_home_aa87f051efc8b9ef17a214b7602479dcc} 
+virtual Home\+::\texorpdfstring{$\sim$}{\string~}\+Home (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_home_a40ebc1deab44ca1b4951cd52012d5b9a}\index{Home@{Home}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Home@{Home}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{class_home_a40ebc1deab44ca1b4951cd52012d5b9a} 
+\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*} Home\+::get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the single instance of the \doxylink{class_home}{Home} class. 
+
+Returns the instance of the \doxylink{class_home}{Home} class using the Singleton pattern.
+
+This method ensures that there is only one instance of the \doxylink{class_home}{Home} class. If the instance does not exist, it creates one.
+
+\begin{DoxyReturn}{Returns}
+Home\texorpdfstring{$\ast$}{*} The instance of the \doxylink{class_home}{Home} class.
+\end{DoxyReturn}
+This function ensures that there is only one instance of the \doxylink{class_home}{Home} class. If an instance does not exist, a new one is created.
+
+\begin{DoxyReturn}{Returns}
+Home\texorpdfstring{$\ast$}{*} The single instance of the \doxylink{class_home}{Home} class. 
+\end{DoxyReturn}
+\Hypertarget{class_home_a202bd92cc73fb5b7b442739e29b8d997}\index{Home@{Home}!getRooms@{getRooms}}
+\index{getRooms@{getRooms}!Home@{Home}}
+\doxysubsubsection{\texorpdfstring{getRooms()}{getRooms()}}
+{\footnotesize\ttfamily \label{class_home_a202bd92cc73fb5b7b442739e29b8d997} 
+std\+::vector$<$ \mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*} $>$ \& Home\+::get\+Rooms (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the list of rooms in the home. 
+
+Returns the list of rooms in the home.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Room\texorpdfstring{$\ast$}{*}$>$\& A reference to the list of rooms in the home.
+\end{DoxyReturn}
+This function returns a reference to the list of rooms in the home.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Room\texorpdfstring{$\ast$}{*}$>$\& A reference to the list of rooms. 
+\end{DoxyReturn}
+\Hypertarget{class_home_ae8f699b5656b3a4d6aaf40b88c919aae}\index{Home@{Home}!getUsers@{getUsers}}
+\index{getUsers@{getUsers}!Home@{Home}}
+\doxysubsubsection{\texorpdfstring{getUsers()}{getUsers()}}
+{\footnotesize\ttfamily \label{class_home_ae8f699b5656b3a4d6aaf40b88c919aae} 
+std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} $>$ \& Home\+::get\+Users (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the list of users in the home. 
+
+Returns the list of users in the home.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+User\texorpdfstring{$\ast$}{*}$>$\& A reference to the list of users in the home.
+\end{DoxyReturn}
+This function returns a reference to the list of users in the home.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+User\texorpdfstring{$\ast$}{*}$>$\& A reference to the list of users. 
+\end{DoxyReturn}
+\Hypertarget{class_home_a69599572a856d29f6cdd84278ae435b1}\index{Home@{Home}!loadState@{loadState}}
+\index{loadState@{loadState}!Home@{Home}}
+\doxysubsubsection{\texorpdfstring{loadState()}{loadState()}}
+{\footnotesize\ttfamily \label{class_home_a69599572a856d29f6cdd84278ae435b1} 
+void Home\+::load\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file}{}\end{DoxyParamCaption})}
+
+
+
+Loads the state of the home from a file. 
+
+Loads the home state from the specified file.
+
+This method loads user and room information from the specified file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The name of the file from which the state will be loaded.\\
+\hline
+\end{DoxyParams}
+This function reads the information about users, rooms, and devices from the given file and performs the necessary operations to load the data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The name of the file from which the home state will be loaded. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_home_a6971706aaee2933230cf5c69bffadfe4}\index{Home@{Home}!operator=@{operator=}}
+\index{operator=@{operator=}!Home@{Home}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_home_a6971706aaee2933230cf5c69bffadfe4} 
+\mbox{\hyperlink{class_home}{Home}} \& Home\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_home}{Home}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+Deleted assignment operator to prevent assignment. 
+
+\Hypertarget{class_home_a4f703e58090c9c8224aaf7b2f3bde844}\index{Home@{Home}!saveState@{saveState}}
+\index{saveState@{saveState}!Home@{Home}}
+\doxysubsubsection{\texorpdfstring{saveState()}{saveState()}}
+{\footnotesize\ttfamily \label{class_home_a4f703e58090c9c8224aaf7b2f3bde844} 
+void Home\+::save\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file}{}\end{DoxyParamCaption})}
+
+
+
+Saves the state of the home (users and rooms) to a file. 
+
+Saves the current state of the home (users and rooms) to a specified file.
+
+This method writes user credentials and room information to the specified file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The name of the file where the state will be saved.\\
+\hline
+\end{DoxyParams}
+This function writes the users\textquotesingle{} credentials and the rooms\textquotesingle{} information, including the devices inside the rooms, to the given file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The name of the file where the state will be saved. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_home_ab970b007569698fdbc8b01c9840973c3}\index{Home@{Home}!instance@{instance}}
+\index{instance@{instance}!Home@{Home}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \label{class_home_ab970b007569698fdbc8b01c9840973c3} 
+\mbox{\hyperlink{class_home}{Home}} \texorpdfstring{$\ast$}{*} Home\+::instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Static pointer to the single instance of the \doxylink{class_home}{Home} class. 
+
+\Hypertarget{class_home_ae978440bd1c59da1c7adef5227a15a01}\index{Home@{Home}!rooms@{rooms}}
+\index{rooms@{rooms}!Home@{Home}}
+\doxysubsubsection{\texorpdfstring{rooms}{rooms}}
+{\footnotesize\ttfamily \label{class_home_ae978440bd1c59da1c7adef5227a15a01} 
+std\+::vector$<$\mbox{\hyperlink{class_room}{Room}} \texorpdfstring{$\ast$}{*}$>$ Home\+::rooms\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of rooms in the home. 
+
+\Hypertarget{class_home_a3bf89e4f507b428155526588883e9a6b}\index{Home@{Home}!users@{users}}
+\index{users@{users}!Home@{Home}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily \label{class_home_a3bf89e4f507b428155526588883e9a6b} 
+std\+::vector$<$\mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*}$>$ Home\+::users\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of users in the home. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_home_8h}{Home.\+h}}\item 
+\mbox{\hyperlink{_home_8cpp}{Home.\+cpp}}\end{DoxyCompactItemize}

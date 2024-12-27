@@ -1,0 +1,112 @@
+\doxysection{Washing\+Machine Class Reference}
+\hypertarget{class_washing_machine}{}\label{class_washing_machine}\index{WashingMachine@{WashingMachine}}
+
+
+Represents a washing machine with adjustable modes, cycle value, and temperature settings.  
+
+
+
+
+{\ttfamily \#include $<$Washing\+Machine.\+h$>$}
+
+Inheritance diagram for Washing\+Machine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_washing_machine}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_washing_machine_a174dc47d8aac461144e47542e704cf06}{cycle\+Value}} = 800
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_has_mode}{Has\+Mode}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_has_mode_a039f3e1180a54709fbab5da9aecff340}{Has\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_has_mode}{Has\+Mode} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_has_mode_af346155b61989061fd6bf776cadd32dd}{set\+Mode}} (std\+::string mode)=0
+\begin{DoxyCompactList}\small\item\em Sets the operation mode of the device. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_has_mode_aeb84eb09fb9dac660e63f47ae07d2e9e}{get\+Mode}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the current operation mode of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_has_mode_ad987c247c91a305449054278b06ff410}{set\+Working}} (bool running)
+\begin{DoxyCompactList}\small\item\em Sets the operational state of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_has_mode_a1d47ccaca43ada751614822b0f21defe}{is\+Working}} ()
+\begin{DoxyCompactList}\small\item\em Gets the operational state of the device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_has_mode_af705f255a0c51d36909478d52ddf6a7e}{reset}} ()=0
+\begin{DoxyCompactList}\small\item\em Resets the device\textquotesingle{}s settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_has_mode_a0d73e85bf108707748ac7e707a16c6e9}{set\+Timer}} (int timer)
+\begin{DoxyCompactList}\small\item\em Sets the timer for the device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_has_mode_a51ec2ab1c2984e06c5fad2683a6bd2ae}{get\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current timer value for the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_has_mode_acb395c983ef36d12b181dcfd2f0edfc3}{stop\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Stops the timer for the device. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_has_mode_abcd509b7df6fa63304fcd363c18c21d0}{get\+Modes}} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of available operation modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_a64ba12dcc5f4267486c5d545d04dcf68}{Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes the device as inactive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_device_a2f308f1fe5e1e32b37333887eba268a4}{Device}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_device}{Device} object with a specified name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_device_a6fef4f7180512c7517c9696cd95e503a}{\texorpdfstring{$\sim$}{\string~}\+Device}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup in derived classes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a}{open}} ()
+\begin{DoxyCompactList}\small\item\em Opens the device, setting it as active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1efd8ba466deb39035ee8d4d97a996d3}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes the device, setting it as inactive. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_device_a81a6b84413e41787ac5295a0b3647724}{display}} () const =0
+\begin{DoxyCompactList}\small\item\em Displays the device information. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_device_a1f3676c3dad0ab90bfb4ae33b61e7c2d}{get\+Energy\+Consumption}} () const =0
+\begin{DoxyCompactList}\small\item\em Retrieves the energy consumption of the device. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_device_a053c15332a49b1c890631fb4a24525fa}{thread\+Level}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieves the thread level of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_device_a16847918d8607c8fec47ab72cc8500ff}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a203476ff55d58d4ac147072936f4eaeb}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the device is currently active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_a1973abf46f0e550e9843d55b7ca9b231}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device_ad013386d9389cbabaf245cbc651b17b3}{set\+Active}} (bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}})
+\begin{DoxyCompactList}\small\item\em Sets the active status of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_a692408a9df0fc88df4eb869db4476002}{operator==}} (\mbox{\hyperlink{class_device}{Device}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares two \doxylink{class_device}{Device} objects by their name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_has_mode}{Has\+Mode}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_has_mode_adec03ee7a1f2cb05b90a4e8557dc8459}{operation\+Type}}
+\item 
+int \mbox{\hyperlink{class_has_mode_a14c72f923afaa0ffa6202db1742fbd8b}{device\+Timer}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_has_mode_aefbcd9f129aa5588e3ae89533b9f5b08}{modes}}
+\item 
+bool \mbox{\hyperlink{class_has_mode_afa7810fd399c424c8bad4a538f173fdc}{working}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_device}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_device_a37bc1fcd4f0433cc899bbc835e298704}{device\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}}
+\begin{DoxyCompactList}\small\item\em The active status of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a washing machine with adjustable modes, cycle value, and temperature settings. 
+
+This class inherits from the \doxylink{class_has_mode}{Has\+Mode} interface and implements additional functionalities specific to a washing machine. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_washing_machine_a174dc47d8aac461144e47542e704cf06}\index{WashingMachine@{WashingMachine}!cycleValue@{cycleValue}}
+\index{cycleValue@{cycleValue}!WashingMachine@{WashingMachine}}
+\doxysubsubsection{\texorpdfstring{cycleValue}{cycleValue}}
+{\footnotesize\ttfamily \label{class_washing_machine_a174dc47d8aac461144e47542e704cf06} 
+int Washing\+Machine\+::cycle\+Value = 800\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_washing_machine_8h}{Washing\+Machine.\+h}}\end{DoxyCompactItemize}

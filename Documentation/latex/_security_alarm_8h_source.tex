@@ -1,0 +1,33 @@
+\doxysection{Security\+Alarm.\+h}
+\hypertarget{_security_alarm_8h_source}{}\label{_security_alarm_8h_source}\mbox{\hyperlink{_security_alarm_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SECURITYALARM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SECURITYALARM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_device_8h}{Device.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_security_alarm}{SecurityAlarm}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_device}{Device}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_security_alarm_a03dbd0f931c412f8b42346d5d1e05760}{voiceLevel}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_security_alarm_a3640d48d806ababc55b18294c7c4ac87}{SecurityAlarm}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_security_alarm_aa7eff2969be8fec7e5adfdc25ec6c1aa}{getVoiceLevel}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_security_alarm_a2b0fb05e43155b6ed6cec6cba432e3dc}{setVoiceLevel}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_security_alarm_a03dbd0f931c412f8b42346d5d1e05760}{voiceLevel}});}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_security_alarm_ae18021a62c341eb87bef78b6d4519c8a}{ring}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_security_alarm_a97997130946345ff771706d801682e82}{display}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_security_alarm_a7deea794b3cd1cf622098fc0ad90a329}{getEnergyConsumption}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_security_alarm_aa4433b071056f738c79400c84e0706ed}{threadLevel}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

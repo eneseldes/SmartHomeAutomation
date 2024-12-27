@@ -1,0 +1,45 @@
+\doxysection{Device.\+h}
+\hypertarget{_device_8h_source}{}\label{_device_8h_source}\mbox{\hyperlink{_device_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DEVICE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DEVICE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_device}{Device}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ \mbox{\hyperlink{class_device_a37bc1fcd4f0433cc899bbc835e298704}{deviceName}};\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}};\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_device_a64ba12dcc5f4267486c5d545d04dcf68}{Device}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_device_a64ba12dcc5f4267486c5d545d04dcf68}{Device}}(std::string\ name);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_device_a6fef4f7180512c7517c9696cd95e503a}{\string~Device}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_ae9fc2f0dfcc05c9fcbfdf776e49ab41a}{open}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_a1efd8ba466deb39035ee8d4d97a996d3}{close}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_a81a6b84413e41787ac5295a0b3647724}{display}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_device_a1f3676c3dad0ab90bfb4ae33b61e7c2d}{getEnergyConsumption}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_device_a053c15332a49b1c890631fb4a24525fa}{threadLevel}}()\ =\ 0;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ std::string\ \mbox{\hyperlink{class_device_a16847918d8607c8fec47ab72cc8500ff}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_device_a203476ff55d58d4ac147072936f4eaeb}{isActive}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_a1973abf46f0e550e9843d55b7ca9b231}{setName}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_ad013386d9389cbabaf245cbc651b17b3}{setActive}}(\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_device_ac6c8534a9c755b5ee9affc37771a301d}{active}});}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_device_a692408a9df0fc88df4eb869db4476002}{operator==}}(\mbox{\hyperlink{class_device}{Device}}\&\ other);}
+\DoxyCodeLine{00124\ \};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
