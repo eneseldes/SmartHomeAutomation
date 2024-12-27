@@ -146,7 +146,7 @@ namespace SmartHomeAutomation {
 			this->btnChildrenRoom->TabIndex = 15;
 			this->btnChildrenRoom->Text = L"ChildrenRoom";
 			this->btnChildrenRoom->UseVisualStyleBackColor = true;
-			this->btnKitchen->Click += gcnew System::EventHandler(this, &Settings::OnVisitRoomClick);
+			this->btnChildrenRoom->Click += gcnew System::EventHandler(this, &Settings::OnVisitRoomClick);
 			// 
 			// btnBedroom
 			// 
@@ -158,7 +158,7 @@ namespace SmartHomeAutomation {
 			this->btnBedroom->TabIndex = 14;
 			this->btnBedroom->Text = L"Bedroom";
 			this->btnBedroom->UseVisualStyleBackColor = true;
-			this->btnKitchen->Click += gcnew System::EventHandler(this, &Settings::OnVisitRoomClick);
+			this->btnBedroom->Click += gcnew System::EventHandler(this, &Settings::OnVisitRoomClick);
 			// 
 			// btnBathroom
 			// 
@@ -170,7 +170,7 @@ namespace SmartHomeAutomation {
 			this->btnBathroom->TabIndex = 13;
 			this->btnBathroom->Text = L"Bathroom";
 			this->btnBathroom->UseVisualStyleBackColor = true;
-			this->btnKitchen->Click += gcnew System::EventHandler(this, &Settings::OnVisitRoomClick);
+			this->btnBathroom->Click += gcnew System::EventHandler(this, &Settings::OnVisitRoomClick);
 			// 
 			// btnLivingRoom
 			// 
@@ -182,7 +182,7 @@ namespace SmartHomeAutomation {
 			this->btnLivingRoom->TabIndex = 12;
 			this->btnLivingRoom->Text = L"LivingRoom";
 			this->btnLivingRoom->UseVisualStyleBackColor = true;
-			this->btnKitchen->Click += gcnew System::EventHandler(this, &Settings::OnVisitRoomClick);
+			this->btnLivingRoom->Click += gcnew System::EventHandler(this, &Settings::OnVisitRoomClick);
 			// 
 			// btnKitchen
 			// 
@@ -475,11 +475,9 @@ namespace SmartHomeAutomation {
 			std::string stdRoomName = msclr::interop::marshal_as<std::string>(clickedButton->Text);
 
 			// Visit room
-			for each (Room * room in home->getRooms())
+			for each(Room * room in home->getRooms())
 				if (stdRoomName == room->getName())
 					currentUser->visitRoom(room);
-
-			MessageBox::Show(gcnew System::String(currentUser->getCurrentRoom()->getName().c_str()));
 		}
 
 		System::Void btnAddUser_Click(System::Object^ sender, System::EventArgs^ e) {

@@ -26,8 +26,7 @@ void User::visitRoom(Room *room)
     // Check visited room is the current room
     if (room == currentRoom)
     {
-        std::cout << ">>> PROCESS FAILED: " << this->getNickname() << " is already in "
-                << currentRoom->getName() << "." << std::endl;
+        System::Windows::Forms::MessageBox::Show("You cannot enter the room that you are in.");
         return;
     }
 
@@ -42,8 +41,8 @@ void User::visitRoom(Room *room)
     // Visit newRoom
     newRoomUserList.push_back(this);
 
-    std::cout << nickname << " moved into " << room->getName() << " from "
-        << currentRoom->getName() << "." << std::endl;
+    currentRoom = room;
+    System::Windows::Forms::MessageBox::Show("You entered " + gcnew System::String(currentRoom->getName().c_str()));
 }
 
 std::string User::getNickname()
