@@ -8,7 +8,7 @@
 - İdris Aydın
 
 <p align="center">
-  <img src="group-photo.jpeg" alt="Proje Görseli" width="70%">
+  <img src="Project Reports/group-photo.jpeg" alt="Proje Görseli" width="70%">
 </p>
 
 ## Repository Overview
