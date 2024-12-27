@@ -17,12 +17,6 @@ This repository will be used to build a smart home automation application using 
 - [Installation and Setup (Visual Studio)](#installation-and-setup-visual-studio)
 - [Running with Powershell(cmd)](#running-with-powershellcmd)
 - [Project Structure: Smart Home Automation System](#project-structure-smart-home-automation-system)
-- [Core Classes and Relationships](#core-classes-and-relationships)
-- [Users and Management](#users-and-management)
-- [Devices and Inheritance](#devices-and-inheritance)
-- [Mode Settings](#mode-settings)
-- [Room and Home](#room-and-home)
-- [Inheritance and Has-a Relationships](#inheritance-and-has-a-relationships)
 
 ## Installation and Setup (Visual Studio):
 
