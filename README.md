@@ -11,8 +11,8 @@
   <img src="Project Reports/group-photo.jpeg" alt="Proje Görseli" width="70%">
 </p>
 
-## Repository Overview
-This repository will be used to build a smart home automation application using object-oriented programming (OOP) principles. Detailed information about the project will be added in future commits.
+## Smart Home Automation Application
+Welcome to the repository for the **Smart Home Automation Application!** This project is designed to implement a cutting-edge home automation system using Object-Oriented Programming (OOP) principles.
 ## Table of Contents
 - [Installation and Setup (Visual Studio)](#installation-and-setup-visual-studio)
 - [Running with Powershell(cmd)](#running-with-powershellcmd)
